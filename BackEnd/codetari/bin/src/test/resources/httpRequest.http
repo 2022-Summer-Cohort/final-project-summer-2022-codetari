@@ -1,0 +1,4 @@
+### get all games
+
+GET   http://localhost:8080/api/games
+Content-Type: application/json
