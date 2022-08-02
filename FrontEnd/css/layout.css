@@ -192,6 +192,13 @@ nav {
     height: fit-content;
     width: fit-content;
 }
+.deleteAccountBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    margin-top: 5rem;
+}
 
 /* ADMIN MAIN PAGE */
 .adminMainPage {
