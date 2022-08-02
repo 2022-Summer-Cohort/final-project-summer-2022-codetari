@@ -240,3 +240,40 @@ footer {
     justify-content: space-between;
     padding: 2rem;
 }
+.companyInfoGroup {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+}
+
+.devs {
+    display: flex;
+    flex-direction: row;
+}
+
+.devProfiles {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.devLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: .25rem;
+}
+
+.picName {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.devNames {
+    padding: 0;
+    margin: 0;
+}

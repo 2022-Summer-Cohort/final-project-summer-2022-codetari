@@ -154,7 +154,10 @@ svg{
     border-radius: 5px;
     padding: 1rem;
 }
-
+.userSocial img {
+    height: 25px;
+    width: 25px;
+}
 /* USER ACCOUNT SETTINGS */
 .accountSettingsSubmitBtn {
     background-color: white;
@@ -198,10 +201,121 @@ svg{
 }
 
 /* FOOTER */
+.companyInfoLogo {
+    height: 40px;
+    width: 40px;
+}
+
+.content {
+    color: black;
+}
+
+#aboutUsPop {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    background-color: darkcyan;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: auto;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: goldenrod;
+}
+
+#aboutUsPop h2 {
+    color: white;
+}
+
+#aboutUsPop .content {
+    color: white;
+}
+.super {
+    overflow: auto;
+}
 footer {
     background-color: black;
 }
 
 footer a {
     color: white;
+}
+#devTeamPop {
+    overflow: auto;
+}
+
+#devTeamPop h2 {
+    color: white;
+}
+
+.linkLogo {
+    height: 20px;
+    width: 20px;
+}
+
+.devPics {
+    height: 150px;
+    width: 150px;
+}
+
+.teamList {
+    text-align: center;
+    background-color: darkcyan
+}
+
+.teamList li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.teamList li:hover {
+    background-color: rgb(8, 102, 102);
 }
