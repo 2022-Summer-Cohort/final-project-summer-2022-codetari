@@ -40,6 +40,11 @@ header img {
     height: 40px;
     width: auto;
 }
+svg{
+    height: 40px;
+    width: auto;
+}
+
 
 /* MAIN CONTAINER */
 /* SIGN IN PAGES */
@@ -151,7 +156,7 @@ header img {
 }
 
 /* USER ACCOUNT SETTINGS */
-.accountSettingsPage button {
+.accountSettingsSubmitBtn {
     background-color: white;
     color: black;
     border-radius: 5px;
@@ -160,6 +165,20 @@ header img {
 .userProfilePic {
     height: 100px;
     width: 100px;
+}
+.deleteAccountBtn {
+    background-color: inherit;
+    color: white;
+    text-align: center;
+}
+
+.deleteAccountBtn img {
+    height: 25px;
+    width: 25px;
+}
+
+.deleteAccountBtn img:hover {
+    background-color: red;
 }
 
 /* ADMIN MAIN PAGE */
