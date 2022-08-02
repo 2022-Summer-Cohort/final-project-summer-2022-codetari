@@ -1,0 +1,232 @@
+/* UNIFORM SITE STYLES */
+body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* HEADER */
+header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* MAIN CONTAINER */
+.mainContainer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* SIGN IN PAGES*/
+.signInPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signInBox {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 1rem;
+    height: 150px;
+    width: 600px;
+    padding: .5rem;
+}
+
+.signInInputs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.otherSignInLinks {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.signInBox button {
+    padding: .25rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+/* GAME SETTINGS PAGE */
+.gameSettingsPage {
+    display: flex;
+    justify-content: center;
+}
+
+.gameSettingsBox {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.gameSettingsOptions {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 2rem;
+    column-gap: 5rem;
+}
+
+.langLvlCombo {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    justify-content: flex-start;
+}
+
+.llc {
+    display: flex;
+    gap: .25rem;
+    justify-content: flex-start;
+}
+
+.gameSettingsBox button {
+    padding: .25rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+/* ALL GAMES PAGE */
+.allGamesPage {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.allGamesBoxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: start;
+    row-gap: 3rem;
+    column-gap: 2rem;
+}
+
+.gameBox1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameBox2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+}
+
+.gameBox2 ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+/* SINGLE GAME PAGE*/
+/* USER PROFILE PAGE */
+.userProfilePage {
+    display: flex;
+    justify-content: center;
+}
+.userProfileTop {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.userProfileContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.openAccountSettings {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.userStats {
+    display: flex;
+    gap: 5rem;
+}
+.userSocial {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+/* USER ACCOUNT SETTINGS */
+.accountSettingsPage {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accountSettingsBox {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 1rem;
+}
+
+.accountSettingsPage button {
+    padding: .25rem;
+    height: fit-content;
+    width: fit-content;
+}
+
+/* ADMIN MAIN PAGE */
+.adminMainPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.createQuestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createQuestion h2 {
+    margin-bottom: 2rem;
+}
+
+.questionOptions {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+
+.adminBoxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* UNIFORM SITE STYLES */
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
+
+input {
+    color: black;
+}
+
+a {
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+/* MAIN CONTAINER */
+/* SIGN IN PAGES */
+.signInPage {
+    background-image: url(/images/codetariLogoBKGPatternAllWhite.png);
+    background-color: black;
+    background-repeat: space;
+    background-size: 275px auto;
+}
+
+.signInBox {
+    background-color: darkgray;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.signInBox button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* GAME SETTINGS PAGE */
+.gameSettingsPage {
+    background-image: url(/images/codetariLogoBKGPatternAllBlack.png);
+    background-color: white;
+    background-repeat: space;
+    background-size: 275px auto;
+}
+
+.gameSettingsBox {
+    background-color: darkgray;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.gameSettingsBox button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+/* ALL GAMES PAGE */
+.allGamesPage h1 {
+    font-size: 35pt;
+}
+
+.gameBox1 {
+    background-color: aquamarine;
+    border-radius: 10px;
+    height: 55px;
+    width: 275px;
+    text-align: center;
+}
+
+.gameBox2 {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.gameBox1:hover {
+    background-color: green;
+    cursor: pointer;
+    color: goldenrod;
+}
+
+.gameBox2 p {
+    color: black;
+    font-size: small;
+    font-style: italic;
+}
+
+.boxClose:hover {
+    color: red;
+    cursor: pointer;
+}
+
+/* SINGLE GAME PAGE*/
+/* USER PROFILE PAGE */
+.userProfilePic1 {
+    height: 200px;
+    width: 200px;
+}
+
+.openAccountSettings img {
+    height: 10px;
+    width: 10px;
+}
+
+.userStats {
+    text-align: center;
+}
+
+.userStats h3 {
+    font-size: 25pt;
+}
+
+.userStats p {
+    font-size: 25pt;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.userSocial h2 {
+    background-color: purple;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+/* USER ACCOUNT SETTINGS */
+.accountSettingsPage button {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.userProfilePic {
+    height: 100px;
+    width: 100px;
+}
+
+/* ADMIN MAIN PAGE */
+.adminMainPage h1 {
+    font-size: 35pt;
+}
+
+.questionOptions a {
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.adminBox {
+    background-color: darkorchid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: white;
+}
