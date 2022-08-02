@@ -62,6 +62,13 @@ nav {
     width: fit-content;
 }
 
+.signUpInputs {
+    display:flex;
+    flex-direction: column;
+    gap: .5rem;
+
+}
+
 /* GAME SETTINGS PAGE */
 .gameSettingsPage {
     display: flex;
