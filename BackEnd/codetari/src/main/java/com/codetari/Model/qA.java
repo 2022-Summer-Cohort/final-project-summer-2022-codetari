@@ -1,9 +1,8 @@
 package com.codetari.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -15,21 +14,28 @@ public class qA {
     @GeneratedValue
     private long id;
 
-
-    @ManyToOne
     private String answer;
     private String question;
+    @ManyToOne
+    @JsonIgnore
+    private Game game;
+    @ElementCollection
     private Collection<String> wrongA;
 
 
 
-    public qA(String question, String answer, String...wrongA) {
+    public qA(String question, String answer, Game game, String...wrongA) {
         this.question = question;
         this.answer = answer;
-        this.wrongA = (Collection<String>) Arrays.asList(wrongA);
+        this.game = game;
+        this.wrongA = Arrays.asList(wrongA);
     }
 
     public qA() {
+    }
+
+    public Game getGame() {
+        return game;
     }
 
     public long getId() {

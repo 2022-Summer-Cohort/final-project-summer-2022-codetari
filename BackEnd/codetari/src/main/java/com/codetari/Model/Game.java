@@ -1,10 +1,13 @@
 package com.codetari.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import java.util.Arrays;
 import java.util.Collection;
 
 @Entity
@@ -20,23 +23,26 @@ public class Game {
     private int level;
 
 
-//    @OneToMany(mappedBy = "Game");
-//    private Collection<Game> games;
+    @OneToMany(mappedBy = "game")
+    private Collection <qA> qAs;
 
 
     //TODO:create an is alive/game over function.
 
 
-    public Game(String title, int score, String qA, String language, int level, Collection<Game> games) {
+    public Game(String title, int score, String qA, String language, int level) {
         this.title = title;
         this.score = score;
         this.qA = qA;
         this.language = language;
         this.level = level;
-        this.games = games;
     }
 
     public Game() {
+    }
+
+    public Collection<qA> getqAs() {
+        return qAs;
     }
 
     public long getId() {
@@ -61,9 +67,5 @@ public class Game {
 
     public int getLevel() {
         return level;
-    }
-
-    public Collection<Game> getGames() {
-        return games;
     }
 }
