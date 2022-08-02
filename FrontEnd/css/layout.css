@@ -16,7 +16,8 @@ nav {
     display: flex;
     justify-content: space-between;
 }
-#center-link{
+
+#center-link {
     margin-left: -10%;
 }
 
@@ -63,7 +64,7 @@ nav {
 }
 
 .signUpInputs {
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: .5rem;
 
@@ -118,6 +119,35 @@ nav {
     align-items: center;
 }
 
+.favGames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favsBtn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.favsBox {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+}
+
+.favsBox ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .allGamesBoxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -156,6 +186,7 @@ nav {
     display: flex;
     justify-content: center;
 }
+
 .userProfileTop {
     display: flex;
     gap: 1rem;
@@ -173,10 +204,12 @@ nav {
     flex-direction: column;
     /* align-items: center; */
 }
+
 .userStats {
     display: flex;
     gap: 5rem;
 }
+
 .userSocial {
     display: flex;
     justify-content: space-between;
@@ -202,6 +235,7 @@ nav {
     height: fit-content;
     width: fit-content;
 }
+
 .deleteAccountBtn {
     display: flex;
     flex-direction: column;
@@ -247,6 +281,7 @@ footer {
     justify-content: space-between;
     padding: 2rem;
 }
+
 .companyInfoGroup {
     display: flex;
     flex-direction: row;

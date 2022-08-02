@@ -40,7 +40,8 @@ header img {
     height: 40px;
     width: auto;
 }
-svg{
+
+svg {
     height: 40px;
     width: auto;
 }
@@ -91,6 +92,32 @@ svg{
 /* ALL GAMES PAGE */
 .allGamesPage h1 {
     font-size: 35pt;
+}
+
+.favsIcon img {
+    height: 15px;
+    width: 15px;
+}
+
+.favsBtn:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.favsBox {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.favsBox p {
+    color: black;
+    font-size: small;
+    font-style: italic;
+}
+
+.favsBoxClose:hover {
+    color: red;
+    cursor: pointer;
 }
 
 .gameBox1 {
@@ -154,10 +181,12 @@ svg{
     border-radius: 5px;
     padding: 1rem;
 }
+
 .userSocial img {
     height: 25px;
     width: 25px;
 }
+
 /* USER ACCOUNT SETTINGS */
 .accountSettingsSubmitBtn {
     background-color: white;
@@ -169,6 +198,7 @@ svg{
     height: 100px;
     width: 100px;
 }
+
 .deleteAccountBtn {
     background-color: inherit;
     color: white;
@@ -276,9 +306,11 @@ svg{
 #aboutUsPop .content {
     color: white;
 }
+
 .super {
     overflow: auto;
 }
+
 footer {
     background-color: black;
 }
@@ -286,6 +318,7 @@ footer {
 footer a {
     color: white;
 }
+
 #devTeamPop {
     overflow: auto;
 }
