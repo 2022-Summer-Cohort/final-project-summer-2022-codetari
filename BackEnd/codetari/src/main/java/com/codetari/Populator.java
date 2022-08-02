@@ -1,3 +1,5 @@
+package com.codetari;
+
 import com.codetari.Model.Game;
 import com.codetari.Model.qA;
 import com.codetari.Repository.GameRepository;
@@ -21,7 +23,9 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         Game game1 = new Game("Clicker",5, "what are the OOP","Java", 2);
-        qA qALevel2_1 = new qA("What are the 5 principles of OOP", "Answer", "wrong","wrong");
+        gameRepo.save(game1);
+        qA qALevel2_1 = new qA("What are the 5 principles of OOP", "Answer", game1, "wrong","wrong");
+        qARepo.save(qALevel2_1);
 
     }
 }
