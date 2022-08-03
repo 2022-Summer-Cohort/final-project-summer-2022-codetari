@@ -24,3 +24,22 @@
 #flames{
     opacity: 0;
 }
+.questionBox button {
+    background-color: purple;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    position: absolute;
+    z-index: 1000;
+    background-color: aqua;
+}
+.questionBox button {
+    width: fit-content;
+    padding: .25rem;
+}
