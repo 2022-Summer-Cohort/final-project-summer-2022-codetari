@@ -12,9 +12,12 @@ header {
 }
 
 nav {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+}
+#center-link{
+    margin-left: -10%;
 }
 
 /* MAIN CONTAINER */
@@ -191,6 +194,13 @@ nav {
     padding: .25rem;
     height: fit-content;
     width: fit-content;
+}
+.deleteAccountBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .25rem;
+    margin-top: 5rem;
 }
 
 /* ADMIN MAIN PAGE */
