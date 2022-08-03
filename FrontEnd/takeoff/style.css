@@ -1,0 +1,26 @@
+.bg{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+.up{
+    position: absolute;
+    left: 50%;
+    z-index: 1000;
+}
+.down{
+    position: absolute;
+    z-index: 1000;
+}
+.spaceship{
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+
+}
+#flames{
+    opacity: 0;
+}
