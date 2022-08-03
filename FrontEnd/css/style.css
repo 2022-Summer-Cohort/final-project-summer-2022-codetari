@@ -160,6 +160,12 @@ svg {
 }
 
 /* SINGLE GAME PAGE*/
+.questionBox button {
+    background-color: purple;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
 /* USER PROFILE PAGE */
 .userProfilePic1 {
     height: 200px;

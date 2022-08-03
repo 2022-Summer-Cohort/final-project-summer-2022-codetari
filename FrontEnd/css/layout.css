@@ -183,6 +183,16 @@ nav {
 }
 
 /* SINGLE GAME PAGE*/
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.questionBox button {
+    width: fit-content;
+    padding: .25rem;
+}
 /* USER PROFILE PAGE */
 .userProfilePage {
     display: flex;
