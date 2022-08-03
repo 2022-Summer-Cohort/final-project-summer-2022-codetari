@@ -54,6 +54,7 @@ svg {
     background-color: black;
     background-repeat: space;
     background-size: 275px auto;
+    height: 500px;
 }
 
 .signInBox {
@@ -68,6 +69,13 @@ svg {
     border-radius: 5px;
 }
 
+#adminSignUpPop {
+    color: black;
+}
+
+#userSignUpPop {
+    color: black;
+}
 
 /* GAME SETTINGS PAGE */
 .gameSettingsPage {
@@ -75,6 +83,7 @@ svg {
     background-color: white;
     background-repeat: space;
     background-size: 275px auto;
+    height: 500px;
 }
 
 .gameSettingsBox {
@@ -267,7 +276,7 @@ svg {
     margin: 70px auto;
     padding: 20px;
     background: #fff;
-    background-color: darkcyan;
+    background-color: orange;
     border-radius: 5px;
     width: 30%;
     position: relative;
@@ -281,7 +290,7 @@ svg {
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 16pt;
 }
 
 .popup .close {
@@ -296,15 +305,15 @@ svg {
 }
 
 .popup .close:hover {
-    color: goldenrod;
+    color: bisque;
 }
 
 #aboutUsPop h2 {
-    color: white;
+    color: black;
 }
 
 #aboutUsPop .content {
-    color: white;
+    color: black;
 }
 
 .super {
@@ -324,7 +333,7 @@ footer a {
 }
 
 #devTeamPop h2 {
-    color: white;
+    color: black;
 }
 
 .linkLogo {
@@ -333,13 +342,14 @@ footer a {
 }
 
 .devPics {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
 }
 
 .teamList {
     text-align: center;
-    background-color: darkcyan
+    background-color: orange;
+    /* background-color:rgb(247, 174, 40); */
 }
 
 .teamList li {
@@ -350,5 +360,5 @@ footer a {
 }
 
 .teamList li:hover {
-    background-color: rgb(8, 102, 102);
+    background-color: orangered;
 }
