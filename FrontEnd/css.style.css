@@ -1,0 +1,36 @@
+.container {
+    background-color: darkgoldenrod;
+}
+.road {
+    display: grid;
+    grid-template-columns: 1fr 20fr 1fr;
+    width: 40%;
+    margin: 0px auto;
+    height: 100vh;
+    background-color: black;
+
+} 
+.roadpic {
+    width:100%;
+    height:100vh;
+    margin:0px;
+}
+
+.roadedge {
+    width: 100%;
+    height:100vh;
+    margin:0px;
+}
+.camel {
+    width: 100px;
+    height: 75px;
+    transform: translate(50px,90vh);
+    
+}
+.car {
+    width:100px;
+    height: auto;
+    transform: rotate(180deg);    
+}
+
+ 
