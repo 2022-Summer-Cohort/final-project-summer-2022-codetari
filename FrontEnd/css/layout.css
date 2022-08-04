@@ -181,12 +181,14 @@ nav {
     justify-content: space-evenly;
     gap: 1rem;
 }
+
 /* FAQ PAGE */
 .allFaqs {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 /* SINGLE GAME PAGE*/
 .questionBox {
     display: flex;
@@ -194,10 +196,16 @@ nav {
     gap: 1rem;
     align-items: center;
 }
+
 .questionBox button {
     width: fit-content;
     padding: .25rem;
 }
+
+.startGame {
+    display: flex;
+}
+
 /* USER PROFILE PAGE */
 .userProfilePage {
     display: flex;
