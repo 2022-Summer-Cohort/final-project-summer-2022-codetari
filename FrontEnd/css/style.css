@@ -180,6 +180,33 @@ svg {
     border: none;
 }
 
+.startGame {
+    background-color: greenyellow;
+    padding: 2rem;
+    border-radius: 50%;
+    border: .75rem ridge;
+    border-color: green;
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+.startGame:hover {
+    background-color: olivedrab;
+    color: gold;
+    cursor: pointer;
+}
+
+.inGameProfileView img {
+    background-color: white;
+    height: 3%;
+    width: 3%;
+}
+.inGameProfileView img:hover {
+   background-color: palevioletred;
+   cursor: pointer;
+}
+
 /* USER PROFILE PAGE */
 .userProfilePic1 {
     height: 200px;
