@@ -16,7 +16,8 @@ nav {
     display: flex;
     justify-content: space-between;
 }
-#center-link{
+
+#center-link {
     margin-left: -10%;
 }
 
@@ -62,10 +63,18 @@ nav {
     width: fit-content;
 }
 
+.signUpInputs {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
 /* GAME SETTINGS PAGE */
 .gameSettingsPage {
     display: flex;
     justify-content: center;
+    padding: 1.5rem;
 }
 
 .gameSettingsBox {
@@ -111,6 +120,36 @@ nav {
     align-items: center;
 }
 
+.favGames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favsBtn {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 2rem;
+}
+
+.favsBox {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    height: fit-content;
+    width: fit-content;
+    padding: 1rem;
+}
+
+.favsBox ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
 .allGamesBoxes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -142,13 +181,29 @@ nav {
     justify-content: space-evenly;
     gap: 1rem;
 }
-
+/* FAQ PAGE */
+.allFaqs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /* SINGLE GAME PAGE*/
+.questionBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+.questionBox button {
+    width: fit-content;
+    padding: .25rem;
+}
 /* USER PROFILE PAGE */
 .userProfilePage {
     display: flex;
     justify-content: center;
 }
+
 .userProfileTop {
     display: flex;
     gap: 1rem;
@@ -166,10 +221,12 @@ nav {
     flex-direction: column;
     /* align-items: center; */
 }
+
 .userStats {
     display: flex;
     gap: 5rem;
 }
+
 .userSocial {
     display: flex;
     justify-content: space-between;
@@ -195,6 +252,7 @@ nav {
     height: fit-content;
     width: fit-content;
 }
+
 .deleteAccountBtn {
     display: flex;
     flex-direction: column;
@@ -239,4 +297,48 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 2rem;
+}
+
+.companyInfoGroup {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.devs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.devs1 {
+    padding-right: 1rem;
+}
+
+.devProfiles {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.devLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: .25rem;
+}
+
+.picName {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.devNames {
+    padding: 0;
+    margin: 0;
 }

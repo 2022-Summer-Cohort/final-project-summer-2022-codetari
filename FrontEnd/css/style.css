@@ -15,6 +15,10 @@ body {
     color: white;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 input {
     color: black;
 }
@@ -40,11 +44,11 @@ header img {
     height: 40px;
     width: auto;
 }
-svg{
+
+svg {
     height: 40px;
     width: auto;
 }
-
 
 /* MAIN CONTAINER */
 /* SIGN IN PAGES */
@@ -53,6 +57,7 @@ svg{
     background-color: black;
     background-repeat: space;
     background-size: 275px auto;
+    height: 500px;
 }
 
 .signInBox {
@@ -67,6 +72,13 @@ svg{
     border-radius: 5px;
 }
 
+#adminSignUpPop {
+    color: black;
+}
+
+#userSignUpPop {
+    color: black;
+}
 
 /* GAME SETTINGS PAGE */
 .gameSettingsPage {
@@ -74,6 +86,7 @@ svg{
     background-color: white;
     background-repeat: space;
     background-size: 275px auto;
+    height: 500px;
 }
 
 .gameSettingsBox {
@@ -89,8 +102,30 @@ svg{
 }
 
 /* ALL GAMES PAGE */
-.allGamesPage h1 {
-    font-size: 35pt;
+.favsIcon img {
+    height: 15px;
+    width: 15px;
+}
+
+.favsBtn:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.favsBox {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.favsBox p {
+    color: black;
+    font-size: small;
+    font-style: italic;
+}
+
+.favsBoxClose:hover {
+    color: red;
+    cursor: pointer;
 }
 
 .gameBox1 {
@@ -123,7 +158,28 @@ svg{
     cursor: pointer;
 }
 
+.ask {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* FAQ PAGE */
+.faqBox h3 {
+    color: darkcyan;
+}
+
+.faqBox p {
+    color: gold;
+}
+
 /* SINGLE GAME PAGE*/
+.questionBox button {
+    background-color: purple;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
 /* USER PROFILE PAGE */
 .userProfilePic1 {
     height: 200px;
@@ -155,6 +211,11 @@ svg{
     padding: 1rem;
 }
 
+.userSocial img {
+    height: 25px;
+    width: 25px;
+}
+
 /* USER ACCOUNT SETTINGS */
 .accountSettingsSubmitBtn {
     background-color: white;
@@ -166,6 +227,7 @@ svg{
     height: 100px;
     width: 100px;
 }
+
 .deleteAccountBtn {
     background-color: inherit;
     color: white;
@@ -198,10 +260,125 @@ svg{
 }
 
 /* FOOTER */
+.companyInfoLogo {
+    height: 35%;
+    width: 35%;
+}
+
+.content {
+    color: black;
+}
+
+#aboutUsPop {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    background-color: orange;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: auto;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16pt;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: bisque;
+}
+
+#aboutUsPop h2 {
+    color: black;
+}
+
+#aboutUsPop .content {
+    color: black;
+}
+
+.super {
+    overflow: auto;
+}
+
 footer {
     background-color: black;
 }
 
 footer a {
     color: white;
+}
+
+#devTeamPop {
+    overflow: auto;
+}
+
+#devTeamPop h2 {
+    color: black;
+}
+
+.linkLogo {
+    height: 20px;
+    width: 20px;
+}
+
+.devPics {
+    height: 125px;
+    width: 125px;
+}
+
+.teamList {
+    text-align: center;
+    background-color: orange;
+    /* background-color:rgb(247, 174, 40); */
+}
+
+.teamList li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.teamList li:hover {
+    background-color: orangered;
 }
