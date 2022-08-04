@@ -15,6 +15,10 @@ body {
     color: white;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 input {
     color: black;
 }
@@ -45,7 +49,6 @@ svg {
     height: 40px;
     width: auto;
 }
-
 
 /* MAIN CONTAINER */
 /* SIGN IN PAGES */
@@ -99,10 +102,6 @@ svg {
 }
 
 /* ALL GAMES PAGE */
-.allGamesPage h1 {
-    font-size: 35pt;
-}
-
 .favsIcon img {
     height: 15px;
     width: 15px;
@@ -159,6 +158,20 @@ svg {
     cursor: pointer;
 }
 
+.ask {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* FAQ PAGE */
+.faqBox h3 {
+    color: darkcyan;
+}
+
+.faqBox p {
+    color: gold;
+}
+
 /* SINGLE GAME PAGE*/
 .questionBox button {
     background-color: purple;
@@ -166,6 +179,7 @@ svg {
     border-radius: 3px;
     border: none;
 }
+
 /* USER PROFILE PAGE */
 .userProfilePic1 {
     height: 200px;
