@@ -1,0 +1,18 @@
+### get all games
+GET   http://localhost:8080/api/games
+Content-Type: application/json
+
+### get game by id
+
+GET   http://localhost:8080/api/games/1
+Content-Type: application/json
+
+### get all qA
+
+GET   http://localhost:8080/api/qA
+Content-Type: application/json
+
+### get qA by id
+
+GET   http://localhost:8080/api/qA/2
+Content-Type: application/json
