@@ -15,6 +15,10 @@ body {
     color: white;
 }
 
+h1 {
+    font-size: 2rem;
+}
+
 input {
     color: black;
 }
@@ -40,11 +44,11 @@ header img {
     height: 40px;
     width: auto;
 }
-svg{
+
+svg {
     height: 40px;
     width: auto;
 }
-
 
 /* MAIN CONTAINER */
 /* SIGN IN PAGES */
@@ -53,6 +57,7 @@ svg{
     background-color: black;
     background-repeat: space;
     background-size: 275px auto;
+    height: 500px;
 }
 
 .signInBox {
@@ -67,6 +72,13 @@ svg{
     border-radius: 5px;
 }
 
+#adminSignUpPop {
+    color: black;
+}
+
+#userSignUpPop {
+    color: black;
+}
 
 /* GAME SETTINGS PAGE */
 .gameSettingsPage {
@@ -74,6 +86,7 @@ svg{
     background-color: white;
     background-repeat: space;
     background-size: 275px auto;
+    height: 500px;
 }
 
 .gameSettingsBox {
@@ -89,8 +102,30 @@ svg{
 }
 
 /* ALL GAMES PAGE */
-.allGamesPage h1 {
-    font-size: 35pt;
+.favsIcon img {
+    height: 15px;
+    width: 15px;
+}
+
+.favsBtn:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.favsBox {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.favsBox p {
+    color: black;
+    font-size: small;
+    font-style: italic;
+}
+
+.favsBoxClose:hover {
+    color: red;
+    cursor: pointer;
 }
 
 .gameBox1 {
@@ -123,7 +158,28 @@ svg{
     cursor: pointer;
 }
 
+.ask {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* FAQ PAGE */
+.faqBox h3 {
+    color: darkcyan;
+}
+
+.faqBox p {
+    color: gold;
+}
+
 /* SINGLE GAME PAGE*/
+.questionBox button {
+    background-color: purple;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
 /* USER PROFILE PAGE */
 .userProfilePic1 {
     height: 200px;
@@ -154,10 +210,12 @@ svg{
     border-radius: 5px;
     padding: 1rem;
 }
+
 .userSocial img {
     height: 25px;
     width: 25px;
 }
+
 /* USER ACCOUNT SETTINGS */
 .accountSettingsSubmitBtn {
     background-color: white;
@@ -169,6 +227,7 @@ svg{
     height: 100px;
     width: 100px;
 }
+
 .deleteAccountBtn {
     background-color: inherit;
     color: white;
@@ -202,8 +261,8 @@ svg{
 
 /* FOOTER */
 .companyInfoLogo {
-    height: 40px;
-    width: 40px;
+    height: 35%;
+    width: 35%;
 }
 
 .content {
@@ -237,7 +296,7 @@ svg{
     margin: 70px auto;
     padding: 20px;
     background: #fff;
-    background-color: darkcyan;
+    background-color: orange;
     border-radius: 5px;
     width: 30%;
     position: relative;
@@ -251,7 +310,7 @@ svg{
     margin-top: 0;
     color: #333;
     font-family: Tahoma, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 16pt;
 }
 
 .popup .close {
@@ -266,19 +325,21 @@ svg{
 }
 
 .popup .close:hover {
-    color: goldenrod;
+    color: bisque;
 }
 
 #aboutUsPop h2 {
-    color: white;
+    color: black;
 }
 
 #aboutUsPop .content {
-    color: white;
+    color: black;
 }
+
 .super {
     overflow: auto;
 }
+
 footer {
     background-color: black;
 }
@@ -286,12 +347,13 @@ footer {
 footer a {
     color: white;
 }
+
 #devTeamPop {
     overflow: auto;
 }
 
 #devTeamPop h2 {
-    color: white;
+    color: black;
 }
 
 .linkLogo {
@@ -300,13 +362,14 @@ footer a {
 }
 
 .devPics {
-    height: 150px;
-    width: 150px;
+    height: 125px;
+    width: 125px;
 }
 
 .teamList {
     text-align: center;
-    background-color: darkcyan
+    background-color: orange;
+    /* background-color:rgb(247, 174, 40); */
 }
 
 .teamList li {
@@ -317,5 +380,5 @@ footer a {
 }
 
 .teamList li:hover {
-    background-color: rgb(8, 102, 102);
+    background-color: orangered;
 }
