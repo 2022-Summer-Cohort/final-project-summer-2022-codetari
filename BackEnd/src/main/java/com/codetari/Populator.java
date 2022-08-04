@@ -22,11 +22,11 @@ public class Populator implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Game game1 = new Game("Clicker",5, "what are the 4 principles of OOP","Java", 1);
+        Game game1 = new Game("Take Off",5, "what are the 4 principles of OOP","Java", 1, "Space", "./takeoff/takeoff.html");
         gameRepo.save(game1);
-        Game game2 = new Game("REST",3, "what is a rest based web service","C#", 4);
+        Game game2 = new Game("Space Invaders",3, "what is a rest based web service","C#", 4, "Arcade", "./spaceInvaders/spaceInvaders.html");
         gameRepo.save(game2);
-        Game game3 = new Game("Word Problem",5, "why do we use MVC",".NET", 7);
+        Game game3 = new Game("Word Problem",5, "why do we use MVC",".NET", 7, "Classic", "./wp/wp.html");
         gameRepo.save(game3);
 
 
