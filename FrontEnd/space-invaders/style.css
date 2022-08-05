@@ -1,28 +1,9 @@
-.bg{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-
+*{
+    padding: 0;
+    margin: 0;
 }
-.up{
-    position: absolute;
-    left: 50%;
-    z-index: 1000;
-}
-.down{
-    position: absolute;
-    z-index: 1000;
-}
-.spaceship{
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 100;
-
-}
-#flames{
-    opacity: 0;
+canvas{
+    position: relative;
 }
 .questionBox button {
     background-color: purple;
@@ -38,12 +19,15 @@
     position: absolute;
     z-index: 1000;
     background-color: aqua;
+    width: 100%;
 }
 .questionBox button {
     width: fit-content;
     padding: .25rem;
 }
 .overlay{
-    position: absolute;
+    position: relative;
+    width: 100%;
     z-index: 1000;
+
 }

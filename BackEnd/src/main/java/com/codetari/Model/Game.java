@@ -16,18 +16,23 @@ public class Game {
     private String qA;
     private String language;
     private int level;
+    public String category;
+    public String href;
 
     @OneToMany(mappedBy = "game")
     private Collection<qA> qAs;
 
     //TODO:create an is alive/game over function.
 
-    public Game(String title, int score, String qA, String language, int level) {
+    public Game(String title, int score, String qA, String language, int level, String category, String href) {
         this.title = title;
         this.score = score;
         this.qA = qA;
         this.language = language;
         this.level = level;
+        this.category = category;
+        this.href = href;
+
     }
     public Game() {
     }
@@ -58,5 +63,13 @@ public class Game {
 
     public int getLevel() {
         return level;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getHref() {
+        return href;
     }
 }
