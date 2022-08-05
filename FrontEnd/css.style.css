@@ -1,5 +1,6 @@
 .container {
-    background-color: darkgoldenrod;
+    background-color: rgb(184, 129, 11);
+    
 }
 .road {
     display: grid;
@@ -8,6 +9,11 @@
     margin: 0px auto;
     height: 100vh;
     background-color: black;
+    background-image: url("/imageCamel/road-line-png-1.png") ;
+    background-size: 100%;
+    border-left: 7px dashed;
+    border-right: 7px dashed;
+    
 
 } 
 .roadpic {
@@ -23,14 +29,25 @@
 }
 .camel {
     width: 100px;
-    height: 75px;
-    transform: translate(50px,90vh);
+    height: 70px;
+    transform: translate(70px,75vh);
     
 }
 .car {
     width:100px;
     height: auto;
-    transform: rotate(180deg);    
+    transform: rotate(180deg); 
+    
 }
+
+.red {
+
+    fill:red;
+}
+
+.yellow {
+    fill:yellow;
+}
+
 
  
