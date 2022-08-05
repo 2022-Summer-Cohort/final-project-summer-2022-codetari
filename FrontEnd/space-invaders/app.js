@@ -42,6 +42,7 @@ function displayQuestion(q){
         if(answers.checked){
             container.innerHTML = ""
             getRandomId();
+            qcount ++;
         }
         else{
             container.innerHTML = ""

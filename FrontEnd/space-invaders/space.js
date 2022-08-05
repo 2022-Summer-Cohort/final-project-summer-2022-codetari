@@ -1,5 +1,16 @@
 export default function playGame() {
 
+    const pewpew = new Audio("./sound/pewpew.mp3");
+    const muteBtn = document.querySelector(".muteSound")
+    muteBtn.addEventListener("click", ()=>{
+        if(pewpew.muted){
+            pewpew.muted = false;
+        }
+        else{
+            pewpew.muted = true;
+        }
+    })
+
 
     const canvas = document.querySelector("canvas");
     const c = canvas.getContext('2d');
@@ -305,7 +316,7 @@ export default function playGame() {
             frames = 0
         }
         frames++
-        if (frames % 10 == 0 && keys.w.pressed) {
+        if (frames % 30 == 0 && keys.w.pressed) {
             projectiles.push(new Projectile({
                 position: {
                     x: player.position.x + player.width / 2,
@@ -316,6 +327,7 @@ export default function playGame() {
                     y: -10
                 }
             }))
+            pewpew.play();
         }
     }
 
@@ -345,6 +357,7 @@ export default function playGame() {
 
             case 'w':
                 keys.w.pressed = false
+                pewpew.pause();
                 break;
 
 
