@@ -5,9 +5,13 @@ export default function playGame() {
     muteBtn.addEventListener("click", ()=>{
         if(pewpew.muted){
             pewpew.muted = false;
+            document.querySelector(".muteSound").style.backgroundColor = "green";
+            document.querySelector(".muteSound").innerHTML = "Mute Chandan";
         }
         else{
             pewpew.muted = true;
+            document.querySelector(".muteSound").style.backgroundColor = "red";
+            document.querySelector(".muteSound").innerHTML = "Hear Chandan";
         }
     })
 
