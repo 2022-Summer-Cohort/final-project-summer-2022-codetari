@@ -71,29 +71,29 @@ public class Populator implements CommandLineRunner {
         qARepo.save(qALevel19_1);
         qA qALevel20_1 = new qA("Which of these can be overloaded?", "Both Constructors & Methods", game2, "C#", "1","Methods."," Constructors");
         qARepo.save(qALevel20_1);
-        qA qALevel21_1 = new qA("What is the process of defining a method in terms of itself, that is a method that calls itself?", " Recursion", game2,"C#", "1", "Polymorphism.","Abstraction");
+        qA qALevel21_1 = new qA("What is the process of defining a method in terms of itself, that is a method that calls itself?", " Recursion", game2,"C#", "1", "Polymorphism.","Abstraction", "Inheritance");
         qARepo.save(qALevel21_1);
 
 
         qA qALevel22_1 = new qA("CLR is the .NET equivalent of? ", "Java Virtual Machine", game3, ".Net","1", "Common Language Runtime","Common Type System");
         qARepo.save(qALevel22_1);
-        qA qALevel23_1 = new qA("SOAP stands for?", "Simple Object Access Protocol", game3, ".Net","1", "Simple Object Application Protocol","Simple Object Account Protocol");
+        qA qALevel23_1 = new qA("SOAP stands for?", "Simple Object Access Protocol", game3, ".Net","1", "Simple Object Application Protocol","Simple Object Account Protocol", "what you should wash your mouth out with");
         qARepo.save(qALevel23_1);
-        qA qALevel24_1 = new qA("Which of the following is the root of the .NET type hierarchy?", "System.Object", game3, ".Net","1", "System.Base","System.Root");
+        qA qALevel24_1 = new qA("Which of the following is the root of the .NET type hierarchy?", "System.Object", game3, ".Net","1", "System.Base","System.Root", "System.ofADown");
         qARepo.save(qALevel24_1);
         qA qALevel25_1 = new qA(" How does assembly versioning in .NET prevent DLL Hell?", ".NET allows assemblies to specify the name AND the version of any assemblies they need to run.", game3, ".Net","1", "The compiler offers compile time checking for backward compatibility.","The runtime checks to see that only one version of an assembly is on the machine at any one time.");
         qARepo.save(qALevel25_1);
-        qA qALevel26_1 = new qA("Which of the following .NET components can be used to remove unused references from the managed heap?", "Garbage Collector", game3, ".Net","1", "Class Loader","CTS");
+        qA qALevel26_1 = new qA("Which of the following .NET components can be used to remove unused references from the managed heap?", "Garbage Collector", game3, ".Net","1", "Class Loader","CTS", "Yo Momma");
         qARepo.save(qALevel26_1);
         qA qALevel27_1 = new qA("Which of the following object is not an ASP component?", "LinkCounter", game3, ".Net","1", "AdRotator","File Access");
         qARepo.save(qALevel27_1);
-        qA qALevel28_1 = new qA("What class does the ASP.NET Web Form class inherit from by default?", "System.Web.UI.Page", game3,  ".Net","1","System.Web.UI.Form"," System.Web.GUI.Page");
+        qA qALevel28_1 = new qA("What class does the ASP.NET Web Form class inherit from by default?", "System.Web.UI.Page", game3,  ".Net","1","System.Web.UI.Form"," System.Web.GUI.Page", "8th grade, the most evil of classes");
         qARepo.save(qALevel28_1);
-        qA qALevel29_1 = new qA("File extension used for ASP.NET files.", ".ASP", game3, ".Net","1", ".ASPX",".Web");
+        qA qALevel29_1 = new qA("File extension used for ASP.NET files.", ".ASP", game3, ".Net","1", ".ASPX",".Web", ".Java");
         qARepo.save(qALevel29_1);
-        qA qALevel30_1 = new qA("Default Session data is stored in ASP.Net.", "InProcess", game3,  ".Net","1","Session Object","StateServer");
+        qA qALevel30_1 = new qA("Default Session data is stored in ASP.Net.", "InProcess", game3,  ".Net","1","Session Object","StateServer", "OutProcess");
         qARepo.save(qALevel30_1);
-        qA qALevel31_1 = new qA("Default scripting language in ASP.", " VBScript", game3,  ".Net","1",".Net", "1","JavaScript","EcmaScript");
+        qA qALevel31_1 = new qA("Default scripting language in ASP.", " VBScript", game3,  ".Net","1",".Net", "1","JavaScript","EcmaScript", "German");
         qARepo.save(qALevel31_1);
 
         qA qALevel32_1 = new qA("What does HTML stand for?", "Hyper Text Markup Language", game1, "HTML", "1", "HybeBeast To Make Langauge", "Hyper Tonic Master Liquid","HamSammich Tower Mastery Lady" );
