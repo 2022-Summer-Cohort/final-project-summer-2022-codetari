@@ -30,36 +30,36 @@ public class Populator implements CommandLineRunner {
         gameRepo.save(game3);
 
 
-        qA qALevel1_1 = new qA("What are the principles of OOP", "Abstraction,Encapsulation,Inheritance,Polymorphism", game1, "Java","1","TDD,Abstraction","None of the Above");
+        qA qALevel1_1 = new qA("What are the principles of OOP", "Abstraction,Encapsulation,Inheritance,Polymorphism", game1, "Java","1","TDD,Abstraction","None of the Above", "Are you down with OOP??");
         qARepo.save(qALevel1_1);
-        qA qALevel2_1 = new qA("A protected member of the class is accessible in?", "Same class and derived class", game1, "Java", "1","Outside the class"," Only same class");
+        qA qALevel2_1 = new qA("A protected member of the class is accessible in?", "Same class and derived class", game1, "Java", "1","Outside the class"," Only same class", "Witness Protection");
         qARepo.save(qALevel2_1);
-        qA qALevel3_1 = new qA("What is the size of boolean variable?", "16 bit", game1, "Java", "1", "32 bit","8 bit");
+        qA qALevel3_1 = new qA("What is the size of boolean variable?", "16 bit", game1, "Java", "1", "32 bit","8 bit", "Nintendo 64bit");
         qARepo.save(qALevel3_1);
-        qA qALevel4_1 = new qA("Which of the following is true about String?", "String is immutable", game1, "Java","1"," String is a data type.","String is mutable");
+        qA qALevel4_1 = new qA("Which of the following is true about String?", "String is immutable", game1, "Java","1"," String is a data type.","String is mutable","Java can use it to make a sweater");
         qARepo.save(qALevel4_1);
-        qA qALevel5_1 = new qA("What are Wrapper classes?", "These are classes that allow primitive types to be accessed as objects", game1, "Java","1"," These are classes that wraps functionality of an existing class","classes that allow you to wrap objects");
+        qA qALevel5_1 = new qA("What are Wrapper classes?", "These are classes that allow primitive types to be accessed as objects", game1, "Java","1"," These are classes that wraps functionality of an existing class","classes that allow you to wrap objects","Cavemen");
         qARepo.save(qALevel5_1);
-        qA qALevel6_1 = new qA("What is correct syntax for main method of a java class?", "public static void main(String[] args)", game1, "Java","1","public static int main(String[] args)","public int main(String[] args)");
+        qA qALevel6_1 = new qA("What is correct syntax for main method of a java class?", "public static void main(String[] args)", game1, "Java","1","public static int main(String[] args)","public int main(String[] args)", "method:");
         qARepo.save(qALevel6_1);
-        qA qALevel7_1 = new qA("What is the size of float variable?", "32 bit", game1,"Java","1", "16 bit","8 bit");
+        qA qALevel7_1 = new qA("What is the size of float variable?", "32 bit", game1,"Java","1", "16 bit","8 bit", "1 sandwichByte");
         qARepo.save(qALevel7_1);
-        qA qALevel8_1 = new qA("What is the default value of long variable?", "- 0L", game1,"Java","1", " 0.0","- 0");
+        qA qALevel8_1 = new qA("What is the default value of long variable?", "- 0L", game1,"Java","1", " 0.0","- 0", "42");
         qARepo.save(qALevel8_1);
-        qA qALevel9_1 = new qA("What is an Interface?", " Interface is an concrete class.", game1, "Java","1"," Interface is an abstract class.","An interface is a collection of abstract methods.");
+        qA qALevel9_1 = new qA("What is an Interface?", " Interface is an concrete class.", game1, "Java","1"," Interface is an abstract class.","An interface is a collection of abstract methods.", "My street BB nickname");
         qARepo.save(qALevel9_1);
-        qA qALevel10_1 = new qA("What is JIT compiler?", " JIT improves the runtime performance of computer programs based on bytecode.", game1, "Java","1","JIT is an application development framework.","JIT is an implementation of the Java Virtual Machine which executes Java programs.");
+        qA qALevel10_1 = new qA("What is JIT compiler?", " JIT improves the runtime performance of computer programs based on bytecode.", game1, "Java","1","JIT is an application development framework.","JIT is an implementation of the Java Virtual Machine which executes Java programs.", "JIT is how your Southern Grandma says 'get' ");
         qARepo.save(qALevel10_1);
 
 
 
-        qA qALevel12_1 = new qA(" Which of the following preprocessor directive marks the end of a #region block in C#?", "endregion", game2, "C#", "1","region","error");
+        qA qALevel12_1 = new qA(" Which of the following preprocessor directive marks the end of a #region block in C#?", "endregion", game2, "C#", "1","region","error", "blahblahblah");
         qARepo.save(qALevel12_1);
-        qA qALevel13_1 = new qA("Which keyword is used to refer baseclass constructor to subclass constructor?", "Base", game2, "C#", "1","Static","Extend");
+        qA qALevel13_1 = new qA("Which keyword is used to refer baseclass constructor to subclass constructor?", "Base", game2, "C#", "1","Static","Extend","GoGoGadget");
         qARepo.save(qALevel13_1);
-        qA qALevel14_1 = new qA("  Which of the following variable types can be assigned a value directly in C#?", "Value types", game2, "C#", "1","Pointer types","Reference types");
+        qA qALevel14_1 = new qA("  Which of the following variable types can be assigned a value directly in C#?", "Value types", game2, "C#", "1","Pointer types","Reference types", "Romantic types");
         qARepo.save(qALevel14_1);
-        qA qALevel15_1 = new qA(" Which of the following converts a type to a string in C#?", "ToString", game2,"C#", "1", "ToChar"," ToSingle");
+        qA qALevel15_1 = new qA(" Which of the following converts a type to a string in C#?", "ToString", game2,"C#", "1", "ToChar"," ToSingle", "");
         qARepo.save(qALevel15_1);
         qA qALevel16_1 = new qA(" Which of the following operator returns the size of a data type in C#?", "sizeof", game2,"C#", "1", "typeof"," ToSingle");
         qARepo.save(qALevel16_1);
@@ -134,14 +134,55 @@ public class Populator implements CommandLineRunner {
         qARepo.save(qALevel48_1);
         qA qALevel49_1 = new qA("How do you start a comment in Python?", "#", game1, "Python", "1", "//", "\\","/('>')/" );
         qARepo.save(qALevel49_1);
-        qA qALevel50_1 = new qA("How do you start a comment in Python?", "#", game1, "Python", "1", "//", "\\","/('>')/" );
+        qA qALevel50_1 = new qA("What is Python?", "computer coding language", game1, "Python", "1", "a small bird", "super duper complicated","Stop asking me questions!!!" );
         qARepo.save(qALevel50_1);
         qA qALevel51_1 = new qA("What is the Syntax for multi line comments in Python?", "There technically isn't one ", game1, "Python", "1", "/# #/", "#' '#","comment#()" );
         qARepo.save(qALevel51_1);
         //stopped at python comments in w3 schools.
 
-        qA qALevel52_1 = new qA("", "There technically isn't one ", game1, "CSS", "1", "/# #/", "#' '#","comment#()" );
-        qARepo.save(qALevel52_1);
+        qA qaLevel52_1 = new qA("To add an element to the end of an array you use?", "push()", game1, "pop()", "add()");
+        qARepo.save(qaLevel52_1);
+        qA qaLevel53_1 = new qA("What is the intruder?", "mousein", game1, "mouseover", "mouseout");
+        qARepo.save(qaLevel53_1);
+        qA qaLevel54_1 = new qA("Inside which HTML element do we put the JavaScript?", "<script>", game1, " <js>", "<javascript>");
+        qARepo.save(qaLevel54_1);
+        qA qaLevel55_1 = new qA("When we don't assign a value to a variable it will be?", "undefined", game1, "null", "NaN");
+        qARepo.save(qaLevel55_1);
+        qA qaLevel56_1 = new qA("What is the correct syntax for referring to an external script called xxx.js?", "<script src = 'xxx.js'>", game1, "<script name = 'xxx.js>'","<script href = 'xxx.js>'");
+        qARepo.save(qaLevel56_1);
+        qA qaLevel57_1 = new qA("How do we use strict mode in javascript?", "use strict", game1, "use sloppy", "use relaxed");
+        qARepo.save(qaLevel57_1);
+        qA qaLevel58_1 = new qA("what does Json stand for?", "javascript object notation", game1, "javascript open number", "JSON Deruuuuloo");
+        qARepo.save(qaLevel58_1);
+        qA qaLevel59_1 = new qA("JavaScript has 3 types of scope?", "Global scope", game1, "function scope", "variable scope");
+        qARepo.save(qaLevel59_1);
+        qA qaLevel60_1 = new qA("Who created JavaScript language?", " Brendan Eich", game1, "Douglas Crockford", "James Gosling");
+        qARepo.save(qaLevel60_1);
+        qA qaLevel61_1 = new qA("How do you declare a JavaScript variable x?", "let x;", game1, "variable x;", "define x;");
+        qARepo.save(qaLevel61_1);
+        //w3schools Javascript as reference
+
+        qA qALevel70_1 = new qA("What does CSS stand for", "Cascading Style Sheet ", game1, "CSS", "1", "Can't Stop won' Stop!", "Carefully scripted styles","crazy stylish sheetz" );
+        qARepo.save(qALevel70_1);
+        qA qALevel71_1 = new qA("What does CSS do?", "describes how HTML elements are displayed on screen ", game1, "CSS", "1", "changes elements in the HTML index", "Finally makes your parents proud of you","creates methods and functions" );
+        qARepo.save(qALevel71_1);
+        qA qALevel72_1 = new qA("how do you choose an element to interact with?", "a selector ", game1, "CSS", "1", "Creating it", "yodeling it off a mountaintop in Belgium","underlining" );
+        qARepo.save(qALevel72_1);
+        qA qALevel73_1 = new qA("Simple Selectors are", "based on name, id, class", game1, "CSS", "1", "based on placement", "surprisingly based on the religious text","used for backend" );
+        qARepo.save(qALevel73_1);
+        qA qALevel74_1 = new qA("Combination Selectors are for", "selecting elements based on specific relationship between them", game1, "CSS", "1", "creating Voltron", "creating GoTenks","involve using 2 or more stylesheets" );
+        qARepo.save(qALevel74_1);
+        qA qALevel75_1 = new qA("Psuedo-class selectors are used to ", "select element based on a certain state", game1, "CSS", "1", "declare something that is like an object but is really isn't ", "trick the user","Magic" );
+        qARepo.save(qALevel75_1);
+        qA qALevel76_1 = new qA("Psuedo- element selectors are used to ", "select and style a part of an element", game1, "CSS", "1", "change an entire element", " describe anything not covered in Avatar The Last AirBender","rip people off with fake diamonds" );
+        qARepo.save(qALevel76_1);
+        qA qALevel77_1 = new qA("Attribute selectors are used to ", "select elements based on an attribute or attribute value", game1, "CSS", "1", "create an element in HTML", "assign methods","pick that thing about you that embarrasses your spouse" );
+        qARepo.save(qALevel77_1);
+        qA qALevel78_1 = new qA("what symbol is used to select an ID", "#", game1, "CSS", "1", "@", "%","Cymbals?" );
+        qARepo.save(qALevel78_1);
+        qA qALevel79_1 = new qA("Can an ID start with a number?", "No", game1, "CSS", "1", "Yes", "Pretty please?","Why Da Hell You Askin' Me Dooode???! " );
+        qARepo.save(qALevel79_1);
+        // stopped after w3 CSS selectors
 
 
 
