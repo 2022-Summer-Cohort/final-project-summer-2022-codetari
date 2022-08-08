@@ -106,7 +106,23 @@ public class Populator implements CommandLineRunner {
         qARepo.save(qALevel35_1);
         qA qALevel36_1 = new qA("What does HTML stand for?", "Hyper Text Markup Language", game1, "HTML", "1", "HybeBeast To Make Langauge", "Hyper Tonic Master Liquid","HamSammich Tower Mastery Lady" );
         qARepo.save(qALevel36_1);
-        qA qALevel37_1 = new qA("What symbol creates the 'boilerplate'?", "!", game1, "HTML", "1", ">(^_^)> do eiiit", "","HamSammich Tower Mastery Lady" );
+        qA qALevel37_1 = new qA("What symbol creates the 'boilerplate'?", "!", game1, "HTML", "1", ">(^_^)> do eiiit", "%(*o*)%",":");
         qARepo.save(qALevel37_1);
+        qA qALevel38_1 = new qA("how are headings defined?", "<h1> through <h6>", game1, "HTML", "1", "String Heading", "<Head> </Head>","'heading'" );
+        qARepo.save(qALevel38_1);
+        qA qALevel39_1 = new qA("how are paragraphs defined?", "<p> </p>", game1, "HTML", "1", "<P>", "<paragraph>","<pp>" );
+        qARepo.save(qALevel39_1);
+        qA qALevel40_1 = new qA("how are HTML links defined", "<a> tags", game1, "HTML", "1", "<link>", "<href> </href>","<HTML>" );
+        qARepo.save(qALevel40_1);
+        qA qALevel41_1 = new qA("What does an href attribute do?", "assign link destination", game1, "HTML", "1", "label an element", "provide ID","None Ya Bizzness if you wanna keep your kneecaps!" );
+        qARepo.save(qALevel41_1);
+        //Stopped in w3 schools after links in Basic category.
+
+        qA qALevel42_1 = new qA("Python works on code that is executed as written through what system?", "interpreter", game1, "Python", "1", "a small man inside your computer who can barely read", "provide ID","None Ya Bizzness if you wanna keep your kneecaps!" );
+        qARepo.save(qALevel42_1);
+
+
+
+
     }
 }
