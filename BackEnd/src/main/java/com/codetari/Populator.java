@@ -118,8 +118,31 @@ public class Populator implements CommandLineRunner {
         qARepo.save(qALevel41_1);
         //Stopped in w3 schools after links in Basic category.
 
-        qA qALevel42_1 = new qA("Python works on code that is executed as written through what system?", "interpreter", game1, "Python", "1", "a small man inside your computer who can barely read", "provide ID","None Ya Bizzness if you wanna keep your kneecaps!" );
+        qA qALevel42_1 = new qA("Python works on code that is executed as written through what system?", "interpreter", game1, "Python", "1", "a small man inside your computer who can barely read", "Ironman's Jarvis AI","readLiteral" );
         qARepo.save(qALevel42_1);
+        qA qALevel43_1 = new qA("What way doesn't Python work in?", "procrastination", game1, "Python", "1", "procedural", "object oriented","functional" );
+        qARepo.save(qALevel43_1);
+        qA qALevel44_1 = new qA("How do you complete a command/statement in Python?", "new line", game1, "Python", "1", ";", ":","." );
+        qARepo.save(qALevel44_1);
+        qA qALevel45_1 = new qA("How do you define scope in Python?", "indentation/white space", game1, "Python", "1", "{}", "()","Merriam Webster's Dictionary" );
+        qARepo.save(qALevel45_1);
+        qA qALevel46_1 = new qA("What happens if you skip indentation in Python?", "will result in error", game1, "Python", "1", "Grudge Girl crawls out of your monitor", "It will try to read code as best as possible","Nothing" );
+        qARepo.save(qALevel46_1);
+        qA qALevel47_1 = new qA("what is the command for declaring a variable in Python?", "there isn't one", game1, "Python", "1", "var", "variable","!" );
+        qARepo.save(qALevel47_1);
+        qA qALevel48_1 = new qA("which is an example of declaring a variable in Python?", "x = 1", game1, "Python", "1", "var = string", "int long = 5","'in a southern accent'+ I DO DECLARE!!" );
+        qARepo.save(qALevel48_1);
+        qA qALevel49_1 = new qA("How do you start a comment in Python?", "#", game1, "Python", "1", "//", "\\","/('>')/" );
+        qARepo.save(qALevel49_1);
+        qA qALevel50_1 = new qA("How do you start a comment in Python?", "#", game1, "Python", "1", "//", "\\","/('>')/" );
+        qARepo.save(qALevel50_1);
+        qA qALevel51_1 = new qA("What is the Syntax for multi line comments in Python?", "There technically isn't one ", game1, "Python", "1", "/# #/", "#' '#","comment#()" );
+        qARepo.save(qALevel51_1);
+        //stopped at python comments in w3 schools.
+
+        qA qALevel52_1 = new qA("", "There technically isn't one ", game1, "CSS", "1", "/# #/", "#' '#","comment#()" );
+        qARepo.save(qALevel52_1);
+
 
 
 
