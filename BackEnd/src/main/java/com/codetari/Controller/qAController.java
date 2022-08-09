@@ -32,6 +32,4 @@ public class qAController {
     public qA retrieveQaById(@PathVariable Long id){
         return qARepo.findById(id).get();
     }
-
-
 }
