@@ -1,4 +1,4 @@
-export default function playGame() {
+export default function playGame(qcount, wrong) {
 
     const pewpew = new Audio("./sound/pewpew.mp3");
     const muteBtn = document.querySelector(".muteSound")
@@ -332,8 +332,32 @@ export default function playGame() {
                 }
             }))
             pewpew.play();
+            if(qcount > 2){
+                projectiles.push(new Projectile({
+                    position: {
+                        x: player.position.x + player.width / 2 -15,
+                        y: player.position.y
+                    },
+                    velocity: {
+                        x: 0,
+                        y: -10
+                    }
+                }))
+                projectiles.push(new Projectile({
+                    position: {
+                        x: player.position.x + player.width / 2 +15,
+                        y: player.position.y
+                    },
+                    velocity: {
+                        x: 0,
+                        y: -10
+                    }
+                }))
+            }
         }
+
     }
+    console.log(qcount)
 
     addEventListener('keydown', ({ key }) => {
         switch (key) {

@@ -73,8 +73,10 @@ function animeUp(){
     tl.to('.bg', {y: '+=500px'})
     t2.to('#flames', {opacity: 1})
     t2.to('#flames', {opacity: 0})
+    
 }
 function animeDown(){
     const tl = gsap.timeline({defaults: {duration: 1}})
     tl.to('.bg', {y: '0'})
 }
+

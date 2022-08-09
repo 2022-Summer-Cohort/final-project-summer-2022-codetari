@@ -1,6 +1,24 @@
 export default function question(q){
-    console.log(q.question)
-    console.log(q.wrongA)
+    console.log(q.answer)
+    const answersArr = [q.answer];
+    q.wrongA.forEach(wrong =>{
+        answersArr.push(wrong);
+    })
+    function shuffleArray(array) {
+        let curId = array.length;
+    
+        while (0 !== curId) {
+    
+            let randId = Math.floor(Math.random() * curId);
+            curId -= 1;
+    
+            let tmp = array[curId];
+            array[curId] = array[randId];
+            array[randId] = tmp;
+        }
+        return array;
+    }
+    const shuffledArray = shuffleArray(answersArr);
     return `
     <div id="questionPop" class="overlay">
     <div class="popup">
@@ -8,12 +26,13 @@ export default function question(q){
             <div class="questionBox">
                 <h2 class="question">${q.question}</h2>
                     <div class="form">
-                    <label for="right">${q.answer}</label>
-                    <input type="radio" name="multi" value="correct" id="correctAnswer">
-                    ${q.wrongA.map(wrong => {
+                    <input type="hidden" class="rightAnswer" value="${q.answer}">
+                    ${shuffledArray.map(ans => {
                         return `
-                    <label for="wrong3">${wrong}</label>
-                    <input type="radio" name="multi" value="wrongAnswer" id="incorrect"></input>
+                    <div>
+                    <label for="wrong3" class="incorrect" >${ans}</label>
+                    <input type="radio" name="multi" value="${ans}" id="" class="answerInput"></input>
+                    </div>
                     `
                     }).join("")
                 }
