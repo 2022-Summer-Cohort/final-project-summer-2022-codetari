@@ -21,10 +21,10 @@ const player = new Player();
 
 function initiateCollision(){
     const element = document.querySelector('spaceship');
-    const position = element.getBoundingClientRect();
-    const x = position.left;
-    const y = position.top;
-    console.log(x, y)
+    // const position = element.getBoundingClientRect();
+    // const x = position.left;
+    // const y = position.top;
+    // console.log(x, y)
     if (player._score > 1){
         if ('.bg', {y: '0'}) {
             console.log("GAMEOVER");
@@ -89,9 +89,6 @@ function displayQuestion(q){
         }
     })
 }
-
-
-
 
 
 
