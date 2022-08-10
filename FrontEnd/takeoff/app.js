@@ -1,9 +1,10 @@
 import question from "./questions.js"
+import scoreview from "./score.js";
 
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
-
-
+const scoreEl = document.querySelector(".score");
+const testEl = document.querySelector(".split left");
 
 
 class Player {
@@ -44,16 +45,16 @@ playBtn.addEventListener("click", ()=>{
     getRandomId(); 
 })
 
-function scoreMaker() {
-    let questionContainer = document.querySelectorAll(".x");
+// function scoreMaker() {
+//     let questionContainer = document.querySelectorAll(".x");
 
-    questionContainer.forEach(test => {
-    const scoreEl = test.querySelector(".score");
-    console.log(scoreEl);
-    // scoreEl.innerHTML = "__::Score::__ " + player._score;
-    scoreEl.innerHTML = "__::Score::__ " + player._score;
-})          
-}
+//     questionContainer.forEach(test => {
+//     const scoreEl = test.querySelector(".score");
+//     console.log(scoreEl);
+//     // scoreEl.innerHTML = "__::Score::__ " + player._score;
+//     scoreEl.innerHTML = "__::Score::__ " + player._score;
+// })          
+// }
 
 function getRandomId(){
     fetch ("http://localhost:8080/api/qA")
@@ -74,6 +75,7 @@ collidesWithGround()
 
 function makeQuestionView(q){
     body.innerHtml = question(q);
+    
 }
 
 function createQuestion(randomId){
@@ -88,6 +90,7 @@ function createQuestion(randomId){
 function displayQuestion(q){
     
     container.innerHTML += question(q);
+    testEl.innerHTML += scoreview();
     console.log(q)
     const submitBtn = document.querySelector(".submit");
     const answers = document.querySelector("#correctAnswer");
@@ -102,7 +105,9 @@ function displayQuestion(q){
             initiateCollision()
             container.innerHTML = ""
             console.log(player._score);
-            scoreMaker(); 
+            
+            scoreEl.innerHTML = "__::Score::__ " + player._score;
+            
         }
         else{
             container.innerHTML = ""
@@ -115,7 +120,6 @@ function displayQuestion(q){
 
 console.log(background.height);
 console.log(window.innerHeight);
-
 
 
 function animeUp(){
