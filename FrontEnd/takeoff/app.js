@@ -2,7 +2,8 @@ import question from "./questions.js"
 
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
-const scoreEl = document.querySelector(".score");
+
+
 
 
 class Player {
@@ -16,7 +17,6 @@ class Player {
         this._score ++;
     }
 }
-
 
 const player = new Player();
 
@@ -32,14 +32,29 @@ function initiateCollision(){
 initiateCollision()
 const background = document.querySelector('.bg');
 function collidesWithGround() {
-    if (background.offsetHeight == window.innerHeight && player.score > 0) {
-        console.log("gameOver");
+    // if (background.offsetHeight == window.innerHeight && player.score > 0) {
+    //     console.log("gameOver");
+    // }
+    if (player.score > 0 && background.getBoundingClientRect({y: '-5899'})) {
+        console.log("GAMEOVERRRRRRRR");
     }
 }
 
 playBtn.addEventListener("click", ()=>{
-    getRandomId();
+    getRandomId(); 
 })
+
+function scoreMaker() {
+    let questionContainer = document.querySelectorAll(".x");
+
+    questionContainer.forEach(test => {
+    const scoreEl = test.querySelector(".score");
+    console.log(scoreEl);
+    // scoreEl.innerHTML = "__::Score::__ " + player._score;
+    scoreEl.innerHTML = "__::Score::__ " + player._score;
+})          
+}
+
 function getRandomId(){
     fetch ("http://localhost:8080/api/qA")
     .then(res => res.json())
@@ -56,6 +71,7 @@ function getRandomId(){
     
 }
 collidesWithGround()
+
 function makeQuestionView(q){
     body.innerHtml = question(q);
 }
@@ -82,22 +98,21 @@ function displayQuestion(q){
             getRandomId();
             animeUp();
             down();
-            collidesWithGround()
+            // collidesWithGround()
             initiateCollision()
             container.innerHTML = ""
             console.log(player._score);
-            console.log(scoreEl);
-            scoreEl.innerHTML = "__<<Score>>__ " + player._score;
-            
-
+            scoreMaker(); 
         }
         else{
             container.innerHTML = ""
             getRandomId();
         }
-
+        
     })
+     
 }
+
 console.log(background.height);
 console.log(window.innerHeight);
 
