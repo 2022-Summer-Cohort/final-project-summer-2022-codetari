@@ -17,21 +17,25 @@ class Player {
     }
 }
 
+
 const player = new Player();
 
 function initiateCollision(){
     const element = document.querySelector('spaceship');
-    // const position = element.getBoundingClientRect();
-    // const x = position.left;
-    // const y = position.top;
-    // console.log(x, y)
     if (player._score > 1){
-        if ('.bg', {y: '0'}) {
+        if ('.bg', {y: -159}) {
+            console.log(background.getBoundingClientRect());
             console.log("GAMEOVER");
         } 
     }
 }
-
+initiateCollision()
+const background = document.querySelector('.bg');
+function collidesWithGround() {
+    if (background.offsetHeight == window.innerHeight && player.score > 0) {
+        console.log("gameOver");
+    }
+}
 
 playBtn.addEventListener("click", ()=>{
     getRandomId();
@@ -49,7 +53,9 @@ function getRandomId(){
         createQuestion(randomId)
         console.log(randomId)
     })
+    
 }
+collidesWithGround()
 function makeQuestionView(q){
     body.innerHtml = question(q);
 }
@@ -70,16 +76,18 @@ function displayQuestion(q){
     const submitBtn = document.querySelector(".submit");
     const answers = document.querySelector("#correctAnswer");
     submitBtn.addEventListener('click', ()=>{
+        console.log(background.getBoundingClientRect());
         if(answers.checked){
             player.addScore();
             getRandomId();
             animeUp();
             down();
-            initiateCollision();
+            collidesWithGround()
+            initiateCollision()
             container.innerHTML = ""
             console.log(player._score);
             console.log(scoreEl);
-            scoreEl.innerHTML = player._score;
+            scoreEl.innerHTML = "__<<Score>>__ " + player._score;
             
 
         }
@@ -87,10 +95,11 @@ function displayQuestion(q){
             container.innerHTML = ""
             getRandomId();
         }
+
     })
 }
-
-
+console.log(background.height);
+console.log(window.innerHeight);
 
 
 
