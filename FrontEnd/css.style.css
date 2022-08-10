@@ -33,20 +33,23 @@
     transform: translate(70px,75vh);
     
 }
-.car {
+.cars {
     width:100px;
     height: auto;
     transform: rotate(180deg); 
     
 }
 
-.red {
 
-    fill:red;
+.cars {
+    width: 35%;
+    height: auto;
 }
-
-.yellow {
-    fill:yellow;
+.carlayout {
+     display: flex;
+     flex-direction: row;
+     padding: 0;
+     margin: 0;
 }
 
 
