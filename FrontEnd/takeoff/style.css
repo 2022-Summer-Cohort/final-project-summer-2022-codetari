@@ -1,41 +1,69 @@
-.bg{
+.bg {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-.form{
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-  }
-.up{
+}
+
+.up {
     position: absolute;
     left: 50%;
     z-index: 1000;
 }
-.down{
+
+.down {
     position: absolute;
     z-index: 1000;
 }
-.spaceship{
+
+.spaceship {
     position: absolute;
+    display: block;
     top: 53%;
     left: 50%;
     transform: translate(-50%);
     z-index: 100;
 
 }
-#flames{
+
+#boom {
+    animation: hideAnimation 0s ease-in 1.6s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    display: none;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10000;
+    height: 200px;
+    width: 200px;
+}
+
+@keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+
+#flames {
     opacity: 0;
 }
-.question{
+
+.question {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+
 }
+
 .questionBox button {
     background-color: rgb(9, 255, 0);
     color: green;
@@ -45,6 +73,7 @@
     padding: .25rem;
     text-shadow: 0 0 5px #00ff1a;
 }
+
 .questionBox {
     position: static;
     margin-left: auto;
@@ -55,9 +84,7 @@
     padding-bottom: 30px;
     padding-left: 30px;
     background-color: black;
-    background-image: radial-gradient(
-        rgba(0, 150, 0, 0.75), black 120%
-    );
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
     height: 100vh;
     color: rgb(0, 255, 30);
     font: 1.3rem Inconsolata, monospace;
@@ -66,6 +93,7 @@
     width: 80%;
     height: 80%;
 }
+
 .questionBox::after {
     content: "";
     position: absolute;
@@ -76,10 +104,11 @@
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
 }
-.score{
+
+.score {
     z-index: 5000;
     width: 500px;
-    position: relative; 
+    position: relative;
     top: 505px;
     margin-bottom: 30px;
     padding-top: 30px;
@@ -87,9 +116,7 @@
     padding-bottom: 30px;
     padding-left: 30px;
     background-color: black;
-    background-image: radial-gradient(
-        rgba(0, 150, 0, 0.75), black 120%
-    );
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
     height: 10vh;
     color: rgb(0, 255, 30);
     font: 1.3rem Inconsolata, monospace;
@@ -98,6 +125,7 @@
     width: 80%;
     height: 80%;
 }
+
 .score::after {
     content: "";
     position: absolute;
@@ -107,26 +135,44 @@
     height: 100vh;
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
-  }
-.form{
+}
+
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
 }
- 
+
 ::selection {
     background: #0080FF;
-  text-shadow: none;
+    text-shadow: none;
 }
+
 pre {
     margin: 0;
 }
-.overlay{
+
+.overlay {
     position: absolute;
     z-index: 1000;
 }
- 
+
+.gameOver {
+    display: flex;
+    top: 50%;
+    bottom: 50%;
+    /* left: 50%;
+    right: 50%; */
+   
+    position: absolute;
+    
+    font-size: 100pt;
+    color: red;
+    z-index: 11000;
+
+}
+
 .split {
     height: 100%;
     width: 50%;
@@ -136,11 +182,59 @@ pre {
     overflow-x: hidden;
     padding-top: 1px;
 }
-  .left {
+
+.left {
     left: 0;
     background-color: #111;
 }
-  .right {
+
+.right {
     right: 0;
     background-color: rgb(0, 255, 85);
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
 }

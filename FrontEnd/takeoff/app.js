@@ -5,6 +5,9 @@ const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
 const scoreEl = document.querySelector(".score");
 const testEl = document.querySelector(".split left");
+const hiddenScoreEl = document.querySelector(".hiddenScore");
+const spaceshipEl = document.querySelector(".spaceship");
+
 
 class Player {
     constructor() {
@@ -16,6 +19,9 @@ class Player {
     addScore() {
         this._score ++;
     }
+    subScore() {
+        this._score --;
+    }
 }
 
 const player = new Player();
@@ -23,23 +29,15 @@ const player = new Player();
 // y: -increase upon descent 
 // fullscreen main monitor without inspect open: css top: 53%; y: -6987.4375
 // fullscreen laptop monitor without inspect open: top: 43%; y: -4707.95849609375
-function initiateCollision(){
-    const element = document.querySelector('spaceship');
-    if (player._score > 1){
-        if ('.bg', {y: -159}) {
-            console.log(background.getBoundingClientRect());
-            console.log("GAMEOVER");
-        } 
-    }
-}
-initiateCollision()
+
+
 const background = document.querySelector('.bg');
 function collidesWithGround() {
     const background = document.querySelector('.bg');
     // if (background.offsetHeight == window.innerHeight && player.score > 0) {
     //     console.log("gameOver");
     // }
-    if (player.score > 0 && background.getBoundingClientRect({y: '-4700'})) {
+    if (player.score > 0 && background.getBoundingClientRect({y: '-6900px'})) {
         console.log("GAMEOVERRRRRRRR");
     }
 }
@@ -90,6 +88,11 @@ function createQuestion(randomId){
         })
 }
 
+let hS = 1;
+hiddenScoreEl.addEventListener("onChange", ()=> {
+    hiddenScoreEl = hS;
+    initiateCollision();
+    })
 function displayQuestion(q){
     
     container.innerHTML += question(q);
@@ -104,22 +107,41 @@ function displayQuestion(q){
             getRandomId();
             animeUp();
             down();
-            // collidesWithGround()
-            initiateCollision()
-            container.innerHTML = ""
+            collidesWithGround();
+            hS++;
+            initiateCollision();
+            container.innerHTML = "";
             console.log(player._score);
-            
             scoreEl.innerHTML = "__::Score::__ " + player._score;
             
         }
         else{
-            container.innerHTML = ""
+            container.innerHTML = "";
             getRandomId();
-        }
+            initiateCollision();
+            hS--;
+        }    
         
-    })
-     
+    })  
+    
+    console.log("hiddenscore" + hS); 
 }
+
+
+function initiateCollision() { 
+    if (hS <= 0) {
+        document.querySelector(".spaceship").style.display="none";
+        document.querySelector("#boom").style.display="flex";
+        document.querySelector(".gameOver").innerHTML = "GAMEOVER";
+
+
+    }
+}
+
+
+window.addEventListener('scroll', function() { 
+    document.getElementById('showScroll').innerHTML = window.pageYOffset + '5000px'; 
+});
 
 console.log(background.height);
 console.log(window.innerHeight);
