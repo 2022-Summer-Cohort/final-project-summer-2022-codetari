@@ -5,6 +5,7 @@ const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
 const scoreEl = document.querySelector(".score");
 const testEl = document.querySelector(".split left");
+const rightEl = document.querySelector(".split right");
 const hiddenScoreEl = document.querySelector(".hiddenScore");
 const spaceshipEl = document.querySelector(".spaceship");
 
@@ -26,14 +27,11 @@ class Player {
 
 const player = new Player();
 
-// y: -increase upon descent 
-// fullscreen main monitor without inspect open: css top: 53%; y: -6987.4375
-// fullscreen laptop monitor without inspect open: top: 43%; y: -4707.95849609375
+
 
 
 const background = document.querySelector('.bg');
 function collidesWithGround() {
-    const background = document.querySelector('.bg');
     // if (background.offsetHeight == window.innerHeight && player.score > 0) {
     //     console.log("gameOver");
     // }
@@ -46,17 +44,16 @@ playBtn.addEventListener("click", ()=>{
     getRandomId(); 
 })
 
-// function scoreMaker() {
-//     let questionContainer = document.querySelectorAll(".x");
+function scoreMaker() {
+    let questionContainer = document.querySelectorAll(".score");
 
-//     questionContainer.forEach(test => {
-//     const scoreEl = test.querySelector(".score");
-//     console.log(scoreEl);
-//     // scoreEl.innerHTML = "__::Score::__ " + player._score;
-//     scoreEl.innerHTML = "__::Score::__ " + player._score;
-// })          
-// }
-
+    questionContainer.forEach(test => {
+    const scoreEl = test.querySelector(".score");
+    console.log(scoreEl);
+    scoreEl.innerHTML = "__::Score::__ " + player._score;
+})          
+}
+scoreMaker();
 function getRandomId(){
     fetch ("http://localhost:8080/api/qA")
     .then(res => res.json())
@@ -89,14 +86,11 @@ function createQuestion(randomId){
 }
 
 let hS = 1;
-hiddenScoreEl.addEventListener("onChange", ()=> {
-    hiddenScoreEl = hS;
-    initiateCollision();
-    })
+
 function displayQuestion(q){
     
     container.innerHTML += question(q);
-    // testEl.innerHTML += scoreview();
+    // testEl.innerHTML = scoreview();
     console.log(q)
     const submitBtn = document.querySelector(".submit");
     const answers = document.querySelector("#correctAnswer");
@@ -107,23 +101,23 @@ function displayQuestion(q){
             getRandomId();
             animeUp();
             down();
+            collide();
             collidesWithGround();
             hS++;
-            initiateCollision();
             container.innerHTML = "";
             console.log(player._score);
-            scoreEl.innerHTML = "__::Score::__ " + player._score;
+            // scoreEl.innerHTML = "__::Score::__ " + player._score;
             
         }
         else{
             container.innerHTML = "";
             getRandomId();
-            initiateCollision();
+            // initiateCollision();
             hS--;
         }    
         
     })  
-    
+    initiateCollision();
     console.log("hiddenscore" + hS); 
 }
 
@@ -131,12 +125,18 @@ function displayQuestion(q){
 function initiateCollision() { 
     if (hS <= 0) {
         document.querySelector(".spaceship").style.display="none";
-        document.querySelector("#boom").style.display="flex";
         document.querySelector(".gameOver").innerHTML = "GAMEOVER";
+        document.querySelector("#boom").style.display="flex";
+        // document.querySelector("#boom").style.animationDelay="11s";
 
 
     }
 }
+hiddenScoreEl.addEventListener("onChange", ()=> {
+    hiddenScoreEl = hS;
+    initiateCollision();
+    
+    })
 
 
 window.addEventListener('scroll', function() { 
@@ -162,12 +162,40 @@ function animeDown(){
 }
 
 function down(){
-    const tl = gsap.timeline({defaults: {duration: 5}})
-
-    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in"})
     
+    const tl = gsap.timeline({defaults: {duration: 5}})
+    const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
+    console.log(zeroAxisEl);
+    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in"}.onComplete.console.log('finish'))
+    
+    
+    let t3 = new TimeLineMax({
+        onComplete: console.log('finish')
+    })
+    
+    
+    
+    // collide();
+        // if (player._score > 1 && window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9) == zeroAxisEl) {
+        //     console.log("explosion");
+        // }
+        // const animated = window.querySelector('.bg');
+        // animated.addEventListener('animationend',() => {
+        //     console.log('Animation ended');
+        //   });
 }
+// const animated = document.querySelector(tl);
+// animated.addEventListener('animationend',() => {
+//     console.log('Animation ended');
+//   });
 
+function collide(){
+const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
+console.log(zeroAxisEl);
+    if (player._score > 1 && window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9) == zeroAxisEl) {
+        console.log("blah");
+    }
+}
 
 
 

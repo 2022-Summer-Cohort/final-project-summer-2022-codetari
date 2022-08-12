@@ -37,13 +37,14 @@
     animation-fill-mode: forwards;
     position: absolute;
     display: none;
-    top: 53%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%);
     z-index: 10000;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
 }
+
 
 @keyframes hideAnimation {
     to {
@@ -106,15 +107,18 @@
 }
 
 .score {
-    z-index: 5000;
-    width: 500px;
+    
     position: relative;
-    top: 505px;
-    margin-bottom: 30px;
-    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding-top: 15px;
     padding-right: 30px;
     padding-bottom: 30px;
     padding-left: 30px;
+    top: 505px;
+    width: 80%;
+    height: 80%;
     background-color: black;
     background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
     height: 10vh;
@@ -122,17 +126,13 @@
     font: 1.3rem Inconsolata, monospace;
     text-shadow: 0 0 5px #00ff1a;
     border-radius: 20px;
-    width: 80%;
-    height: 80%;
+    
 }
 
 .score::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+    
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
 }
@@ -160,6 +160,8 @@ pre {
 
 .gameOver {
     display: flex;
+    justify-content: center;
+    align-items: center;
     top: 50%;
     bottom: 50%;
     /* left: 50%;
