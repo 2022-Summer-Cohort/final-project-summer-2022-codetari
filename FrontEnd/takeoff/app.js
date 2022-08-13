@@ -166,7 +166,7 @@ function down(){
     const tl = gsap.timeline({defaults: {duration: 5}})
     const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
     console.log(zeroAxisEl);
-    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in"}.onComplete.console.log('finish'))
+    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in"})
     
     
     let t3 = new TimeLineMax({
