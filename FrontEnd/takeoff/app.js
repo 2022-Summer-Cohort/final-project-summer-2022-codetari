@@ -32,9 +32,6 @@ const player = new Player();
 
 const background = document.querySelector('.bg');
 function collidesWithGround() {
-    // if (background.offsetHeight == window.innerHeight && player.score > 0) {
-    //     console.log("gameOver");
-    // }
     if (player.score > 0 && background.getBoundingClientRect({y: '-6900px'})) {
         console.log("GAMEOVERRRRRRRR");
     }
@@ -46,7 +43,6 @@ playBtn.addEventListener("click", ()=>{
 
 function scoreMaker() {
     let questionContainer = document.querySelectorAll(".score");
-
     questionContainer.forEach(test => {
     const scoreEl = test.querySelector(".score");
     console.log(scoreEl);
@@ -69,11 +65,9 @@ function getRandomId(){
     })
     
 }
-// collidesWithGround()
 
 function makeQuestionView(q){
     body.innerHtml = question(q);
-    
 }
 
 function createQuestion(randomId){
@@ -85,7 +79,7 @@ function createQuestion(randomId){
         })
 }
 
-let hS = 1;
+let hS = 2;
 
 function displayQuestion(q){
     
@@ -103,7 +97,6 @@ function displayQuestion(q){
             down();
             collide();
             collidesWithGround();
-            hS++;
             container.innerHTML = "";
             console.log(player._score);
             scoreEl.innerHTML = "__::Score::__ " + player._score;
@@ -112,23 +105,21 @@ function displayQuestion(q){
         else{
             container.innerHTML = "";
             getRandomId();
-            // initiateCollision();
             hS--;
         }    
         
     })  
-    // initiateCollision();
     console.log("hiddenscore" + hS); 
 }
 
 
 function initiateCollision() { 
-    // if (hS <= 0) {
+    if (hS <= 0) {
         document.querySelector(".spaceship").style.display="none";
         document.querySelector(".gameOver").innerHTML = "GAMEOVER";
         document.querySelector("#boom").style.display="flex";
-        // document.querySelector("#boom").style.animationDelay="11s";
-    //}
+        
+    }
 }
 hiddenScoreEl.addEventListener("onChange", ()=> {
     hiddenScoreEl = hS;
@@ -165,29 +156,7 @@ function down(){
     const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
     console.log(zeroAxisEl);
     tl.to('.bg', {y: '0', delay: 5, ease: "power4.in", onComplete: initiateCollision})
-    
-    
-    
-    
-    // let t3 = new TimeLineMax({
-    //     onComplete: console.log('finish')
-    // })
-    
-    
-    
-    // collide();
-        // if (player._score > 1 && window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9) == zeroAxisEl) {
-        //     console.log("explosion");
-        // }
-        // const animated = window.querySelector('.bg');
-        // animated.addEventListener('animationend',() => {
-        //     console.log('Animation ended');
-        //   });
 }
-// const animated = document.querySelector(tl);
-// animated.addEventListener('animationend',() => {
-//     console.log('Animation ended');
-//   });
 
 function collide(){
 const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
@@ -197,17 +166,6 @@ console.log(zeroAxisEl);
     }
 }
 
-// var yAxis = document.querySelector('.bg');
-// // set inline-style transform to element
-// yAxis.style.transform = "translateY(" + (-200) + "px) scaleX(" + 1.6 + ") scaleY(" + 1.2 + ")";
-
-// function getTranslateY() {
-//   var style = window.getComputedStyle(yAxis);
-//   var matrix = new WebKitCSSMatrix(style.transform);
-//   console.log('translateY: ', matrix.m41);
-// }
-
-// document.querySelector('button').addEventListener('click', getTranslateY);
 
 
 
