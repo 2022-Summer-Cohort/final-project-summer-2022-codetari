@@ -4,7 +4,7 @@ import scoreview from "./score.js";
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
 const scoreEl = document.querySelector(".score");
-const testEl = document.querySelector(".split left");
+const leftEl = document.querySelector(".split left");
 const rightEl = document.querySelector(".split right");
 const hiddenScoreEl = document.querySelector(".hiddenScore");
 const spaceshipEl = document.querySelector(".spaceship");
@@ -69,7 +69,7 @@ function getRandomId(){
     })
     
 }
-collidesWithGround()
+// collidesWithGround()
 
 function makeQuestionView(q){
     body.innerHtml = question(q);
@@ -90,7 +90,7 @@ let hS = 1;
 function displayQuestion(q){
     
     container.innerHTML += question(q);
-    // testEl.innerHTML = scoreview();
+    // leftEl.innerHTML = scoreview();
     console.log(q)
     const submitBtn = document.querySelector(".submit");
     const answers = document.querySelector("#correctAnswer");
@@ -106,7 +106,7 @@ function displayQuestion(q){
             hS++;
             container.innerHTML = "";
             console.log(player._score);
-            // scoreEl.innerHTML = "__::Score::__ " + player._score;
+            scoreEl.innerHTML = "__::Score::__ " + player._score;
             
         }
         else{
@@ -117,20 +117,18 @@ function displayQuestion(q){
         }    
         
     })  
-    initiateCollision();
+    // initiateCollision();
     console.log("hiddenscore" + hS); 
 }
 
 
 function initiateCollision() { 
-    if (hS <= 0) {
+    // if (hS <= 0) {
         document.querySelector(".spaceship").style.display="none";
         document.querySelector(".gameOver").innerHTML = "GAMEOVER";
         document.querySelector("#boom").style.display="flex";
         // document.querySelector("#boom").style.animationDelay="11s";
-
-
-    }
+    //}
 }
 hiddenScoreEl.addEventListener("onChange", ()=> {
     hiddenScoreEl = hS;
@@ -166,12 +164,14 @@ function down(){
     const tl = gsap.timeline({defaults: {duration: 5}})
     const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
     console.log(zeroAxisEl);
-    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in"})
+    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in", onComplete: initiateCollision})
     
     
-    let t3 = new TimeLineMax({
-        onComplete: console.log('finish')
-    })
+    
+    
+    // let t3 = new TimeLineMax({
+    //     onComplete: console.log('finish')
+    // })
     
     
     
@@ -196,6 +196,18 @@ console.log(zeroAxisEl);
         console.log("blah");
     }
 }
+
+// var yAxis = document.querySelector('.bg');
+// // set inline-style transform to element
+// yAxis.style.transform = "translateY(" + (-200) + "px) scaleX(" + 1.6 + ") scaleY(" + 1.2 + ")";
+
+// function getTranslateY() {
+//   var style = window.getComputedStyle(yAxis);
+//   var matrix = new WebKitCSSMatrix(style.transform);
+//   console.log('translateY: ', matrix.m41);
+// }
+
+// document.querySelector('button').addEventListener('click', getTranslateY);
 
 
 
