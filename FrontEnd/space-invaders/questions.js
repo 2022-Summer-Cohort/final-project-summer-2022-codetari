@@ -20,16 +20,16 @@ export default function question(q){
     }
     const shuffledArray = shuffleArray(answersArr);
     return `
-    <div id="questionPop" class="overlay">
-    <div class="popup">
-        <div class="content">
+    <div id="questionPop" class="fix">
+    <div>
+        <div class="questionContent">
             <div class="questionBox">
                 <h2 class="question">${q.question}</h2>
                     <div class="form">
                     <input type="hidden" class="rightAnswer" value="${q.answer}">
                     ${shuffledArray.map(ans => {
                         return `
-                    <div>
+                    <div class="joinLabelInput">
                     <label for="wrong3" class="incorrect" >${ans}</label>
                     <input type="radio" name="multi" value="${ans}" id="" class="answerInput"></input>
                     </div>

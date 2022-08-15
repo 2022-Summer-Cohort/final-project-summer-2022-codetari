@@ -1,0 +1,40 @@
+/* UNIFORM SITE STYLES */
+body {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+}
+
+/* HEADER */
+header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#center-link {
+    margin-left: -10%;
+}
+/* MAIN CONTAINER */
+.mainContainer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* FOOTER */
+.userStats {
+    display: flex;
+    gap: 5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
