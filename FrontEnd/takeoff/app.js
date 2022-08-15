@@ -4,11 +4,9 @@ import scoreview from "./score.js";
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
 const scoreEl = document.querySelector(".score");
-const leftEl = document.querySelector(".split left");
+const testEl = document.querySelector(".split left");
 const rightEl = document.querySelector(".split right");
 const hiddenScoreEl = document.querySelector(".hiddenScore");
-const spaceshipEl = document.querySelector(".spaceship");
-
 
 class Player {
     constructor() {
@@ -18,38 +16,42 @@ class Player {
         return this._score;
     }
     addScore() {
-        this._score ++;
+        this._score += 1;
     }
     subScore() {
-        this._score --;
+        this._score -= 1;
     }
 }
 
 const player = new Player();
-
-
-
-
-const background = document.querySelector('.bg');
-function collidesWithGround() {
-    if (player.score > 0 && background.getBoundingClientRect({y: '-6900px'})) {
-        console.log("GAMEOVERRRRRRRR");
+let hS = 1;
+function initiateCollision() { 
+    if (hS <= 0) {
+    document.querySelector(".spaceship").style.display="none";
+    document.querySelector(".gameOver").innerHTML = "GAMEOVER";
+    document.querySelector("#boom").style.display="flex";  
     }
 }
 
-playBtn.addEventListener("click", ()=>{
+hiddenScoreEl.addEventListener("onChange", ()=> {
+    hiddenScoreEl = hS;
+})
+
+const background = document.querySelector('.bg');
+playBtn.addEventListener("click", ()=> {
     getRandomId(); 
 })
 
-function scoreMaker() {
-    let questionContainer = document.querySelectorAll(".score");
-    questionContainer.forEach(test => {
-    const scoreEl = test.querySelector(".score");
-    console.log(scoreEl);
-    scoreEl.innerHTML = "__::Score::__ " + player._score;
-})          
-}
-scoreMaker();
+// function scoreMaker() {
+//     let
+//     questionContainer.forEach(test => {
+//     const scoreEl = test.querySelector(".score");
+//     console.log(scoreEl);
+//     // scoreEl.innerHTML = "__::Score::__ " + player._score;
+//     scoreEl.innerHTML = "__::Score::__ " + player._score;
+// })          
+// }
+
 function getRandomId(){
     fetch ("http://localhost:8080/api/qA")
     .then(res => res.json())
@@ -61,13 +63,12 @@ function getRandomId(){
         })
         let randomId = ids[Math.floor(Math.random()*ids.length)];
         createQuestion(randomId)
-        console.log(randomId)
     })
-    
 }
 
 function makeQuestionView(q){
     body.innerHtml = question(q);
+    
 }
 
 function createQuestion(randomId){
@@ -75,65 +76,51 @@ function createQuestion(randomId){
         .then(res => res.json())
         .then(q =>{
             displayQuestion(q)
-            console.log(q)
+            // console.log(q)
         })
 }
-
-let hS = 2;
 
 function displayQuestion(q){
     
     container.innerHTML += question(q);
-    // leftEl.innerHTML = scoreview();
-    console.log(q)
+    // testEl.innerHTML += scoreview();
+    // console.log(q)
     const submitBtn = document.querySelector(".submit");
     const answers = document.querySelector("#correctAnswer");
     submitBtn.addEventListener('click', ()=>{
-        console.log(background.getBoundingClientRect());
-        if(answers.checked){
+        // console.log(background.getBoundingClientRect());
+        if(answers.checked=true){
             player.addScore();
+            console.log("hiddenScore " + hS);
             getRandomId();
             animeUp();
             down();
-            collide();
-            collidesWithGround();
-            container.innerHTML = "";
+            winGame();
+            container.innerHTML = ""
             console.log(player._score);
-            scoreEl.innerHTML = "__::Score::__ " + player._score;
-            
+            // scoreEl.innerHTML = "__::Score::__ " + player._score;
         }
-        else{
-            container.innerHTML = "";
-            getRandomId();
+        else if (answers.checked=false) {
+            player.subScore();
             hS--;
-        }    
-        
-    })  
-    console.log("hiddenscore" + hS); 
+            console.log("hiddenScore " + hS);
+            console.log(player._score);
+            container.innerHTML = ""
+            getRandomId();
+        }
+    })
 }
 
-
-function initiateCollision() { 
-    if (hS <= 0) {
-        document.querySelector(".spaceship").style.display="none";
-        document.querySelector(".gameOver").innerHTML = "GAMEOVER";
-        document.querySelector("#boom").style.display="flex";
-        
+function winGame() {
+    const topReached = document.querySelector(".youWin");
+    if (player._score >= 4) {
+        topReached.innerHTML = "victory!!!";
+        setTimeout( ()=>{
+        location.reload();
+        }, 5000); 
     }
 }
-hiddenScoreEl.addEventListener("onChange", ()=> {
-    hiddenScoreEl = hS;
-    initiateCollision();
-    
-    })
-
-
-window.addEventListener('scroll', function() { 
-    document.getElementById('showScroll').innerHTML = window.pageYOffset + '5000px'; 
-});
-
-console.log(background.height);
-console.log(window.innerHeight);
+winGame();
 
 
 function animeUp(){
@@ -149,22 +136,14 @@ function animeDown(){
     const tl = gsap.timeline({defaults: {duration: 5}})
     tl.to('.bg', {y: '0'})
 }
-
 function down(){
-    
-    const tl = gsap.timeline({defaults: {duration: 5}})
-    const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
-    console.log(zeroAxisEl);
-    tl.to('.bg', {y: '0', delay: 5, ease: "power4.in", onComplete: initiateCollision})
+    const t3 = gsap.timeline({defaults: {duration: 5}})
+    // setTimeout( ()=>{
+        t3.to('.bg', {y: '0', delay: 5, ease: "power4.in", onComplete: initiateCollision})
+    // }, 10000); 
 }
 
-function collide(){
-const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
-console.log(zeroAxisEl);
-    if (player._score > 1 && window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9) == zeroAxisEl) {
-        console.log("blah");
-    }
-}
+
 
 
 
