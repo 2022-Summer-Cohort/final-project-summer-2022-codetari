@@ -24,7 +24,7 @@ export default function question(q){
                 </div>
             </div>
         </div>
-        
+        <h3 class="score">//Welcome To Takeoff! Do not fail..></h3>
     </div>
     `
 }

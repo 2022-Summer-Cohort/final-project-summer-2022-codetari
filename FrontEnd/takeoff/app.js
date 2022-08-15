@@ -113,6 +113,7 @@ function displayQuestion(q){
 
 function winGame() {
     const topReached = document.querySelector(".youWin");
+    const newgame = document.querySelector(".newgame");
     if (player._score >= 4) {
         topReached.innerHTML = "victory!!!";
         setTimeout( ()=>{
