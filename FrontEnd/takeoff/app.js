@@ -3,7 +3,7 @@ import scoreview from "./score.js";
 
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
-const scoreEl = document.querySelector(".score");
+
 const leftEl = document.querySelector(".split left");
 const rightEl = document.querySelector(".split right");
 const hiddenScoreEl = document.querySelector(".hiddenScore");
@@ -18,24 +18,15 @@ class Player {
         return this._score;
     }
     addScore() {
-        this._score ++;
+        this._score = this._score + 1;
     }
     subScore() {
-        this._score --;
+        this._score = this._score - 1;
     }
 }
 
 const player = new Player();
-
-
-
-
 const background = document.querySelector('.bg');
-function collidesWithGround() {
-    if (player.score > 0 && background.getBoundingClientRect({y: '-6900px'})) {
-        console.log("GAMEOVERRRRRRRR");
-    }
-}
 
 playBtn.addEventListener("click", ()=>{
     getRandomId(); 
@@ -79,10 +70,10 @@ function createQuestion(randomId){
         })
 }
 
-let hS = 2;
+let hS = 1;
 
 function displayQuestion(q){
-    
+    const scoreEl = document.querySelector(".score");
     container.innerHTML += question(q);
     // leftEl.innerHTML = scoreview();
     console.log(q)
@@ -95,16 +86,16 @@ function displayQuestion(q){
             getRandomId();
             animeUp();
             down();
-            collide();
-            collidesWithGround();
             container.innerHTML = "";
             console.log(player._score);
-            scoreEl.innerHTML = "__::Score::__ " + player._score;
+            scoreEl.innerHTML = player._score;
+            
             
         }
         else{
             container.innerHTML = "";
             getRandomId();
+            // player._subScore();
             hS--;
         }    
         
@@ -116,24 +107,26 @@ function displayQuestion(q){
 function initiateCollision() { 
     if (hS <= 0) {
         document.querySelector(".spaceship").style.display="none";
-        document.querySelector(".gameOver").innerHTML = "GAMEOVER";
         document.querySelector("#boom").style.display="flex";
+        document.querySelector(".gameOver").innerHTML = "GAMEOVER";
+        const resetButton = document.querySelector(".reset");
+        resetButton.addEventListener("click", () => {
+        location.reload();
+})
         
     }
 }
 hiddenScoreEl.addEventListener("onChange", ()=> {
     hiddenScoreEl = hS;
-    initiateCollision();
-    
+    //initiateCollision();
     })
 
+// window.addEventListener('scroll', function() { 
+//     document.getElementById('showScroll').innerHTML = window.pageYOffset + '5000px'; 
+// });
 
-window.addEventListener('scroll', function() { 
-    document.getElementById('showScroll').innerHTML = window.pageYOffset + '5000px'; 
-});
-
-console.log(background.height);
-console.log(window.innerHeight);
+// console.log(background.height);
+// console.log(window.innerHeight);
 
 
 function animeUp(){
@@ -151,20 +144,23 @@ function animeDown(){
 }
 
 function down(){
-    
+    // maybe put all gsap.timeline animations into a timeLineMax function, then use oncomplete: initiateCollision 
     const tl = gsap.timeline({defaults: {duration: 5}})
-    const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
-    console.log(zeroAxisEl);
+    // const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
+    // console.log(zeroAxisEl);
     tl.to('.bg', {y: '0', delay: 5, ease: "power4.in", onComplete: initiateCollision})
 }
 
-function collide(){
-const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
-console.log(zeroAxisEl);
-    if (player._score > 1 && window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9) == zeroAxisEl) {
-        console.log("blah");
-    }
-}
+
+
+// function collide(){
+// const zeroAxisEl = window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9);
+// console.log(zeroAxisEl);
+//     if (player._score > 1 && window.getComputedStyle(background).getPropertyValue("transform-origin").substring(9) == zeroAxisEl) {
+//         console.log("gameover");
+//     }
+// }
+
 
 
 

@@ -144,12 +144,12 @@ public class Populator implements CommandLineRunner {
         qARepo.save(qaLevel52_1);
         qA qaLevel53_1 = new qA("What is the intruder?", "mousein", game1, "mouseover", "mouseout");
         qARepo.save(qaLevel53_1);
-        qA qaLevel54_1 = new qA("Inside which HTML element do we put the JavaScript?", "<script>", game1, " <js>", "<javascript>");
-        qARepo.save(qaLevel54_1);
+        // qA qaLevel54_1 = new qA("Inside which HTML element do we put the JavaScript?", "<script>", game1, " <js>", "<javascript>");
+        // qARepo.save(qaLevel54_1);
         qA qaLevel55_1 = new qA("When we don't assign a value to a variable it will be?", "undefined", game1, "null", "NaN");
         qARepo.save(qaLevel55_1);
-        qA qaLevel56_1 = new qA("What is the correct syntax for referring to an external script called xxx.js?", "<script src = 'xxx.js'>", game1, "<script name = 'xxx.js>'","<script href = 'xxx.js>'");
-        qARepo.save(qaLevel56_1);
+        // qA qaLevel56_1 = new qA("What is the correct syntax for referring to an external script called xxx.js?", "<script src = 'xxx.js'>", game1, "<script name = 'xxx.js>'","<script href = 'xxx.js>'");
+        // qARepo.save(qaLevel56_1);
         qA qaLevel57_1 = new qA("How do we use strict mode in javascript?", "use strict", game1, "use sloppy", "use relaxed");
         qARepo.save(qaLevel57_1);
         qA qaLevel58_1 = new qA("what does Json stand for?", "javascript object notation", game1, "javascript open number", "JSON Deruuuuloo");
