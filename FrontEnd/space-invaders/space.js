@@ -235,10 +235,25 @@ export default function playGame(qcount, wrong) {
             pressed: false
         }
     }
+    const pauseEl = document.querySelector(".pause")
+    let pauseCondition = false;
+    pauseEl.addEventListener("click", ()=>{
+        if(pauseCondition){
+            pauseCondition = false;
+            animate();
+            
+        }
+        else{
+            pauseCondition = true;
+            
+        }
+    })
     let frames = 0;
     let randInterval = Math.floor((Math.random() * 500) + 500)
     function animate() {
-        requestAnimationFrame(animate)
+        if(pauseCondition === false){
+            requestAnimationFrame(animate)
+        }
         c.fillStyle = 'black'
         c.fillRect(0, 0, canvas.width, canvas.height)
         player.update();
@@ -393,5 +408,6 @@ export default function playGame(qcount, wrong) {
     })
 
     animate()
+
 
 }
