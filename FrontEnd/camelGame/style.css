@@ -33,20 +33,20 @@
 }
 
 .road{
-    width: 100%;
-    height: 100%;
+    width: 55%;
+    height: 100vh;
     overflow: hidden;
 }
 
 .roadedge {
-    width: 100%;
+    width: 10vw;
     height:100vh;
     margin:0px;
 }
 .camel {
     position: relative;
-    width: 100px;
-    height: 70px;
+    width: 20vw;
+    height: auto;
     display: block;
     margin-top: 100%;
     
@@ -84,7 +84,7 @@ display: none;
 .question{
     background-color:blanchedalmond;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border-radius: 10px;
+    border-radius: 10;
     margin-left:10px;
     
     
@@ -96,10 +96,10 @@ display: none;
 
     .camel {
         position: relative;
-        width: 100px;
-        height: 70px;
+        width: 20%;
+        height: auto;
         display: block;
-        margin-top: 50%;
+        margin-top: 150%;
         
         
     

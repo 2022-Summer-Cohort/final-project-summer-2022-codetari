@@ -46,46 +46,52 @@ document.addEventListener('keyup', (e) => {
 
 
 function animeUp(){
-    y-=15
+    // y-=15
     // camel.style.transform =`translate(${x}px,${y}vh)` 
     camel.style.transform =`translate(${x}px)`
 }
 function animeDown(){
-    y+=15
+    // y+=15
     // camel.style.transform =`translate(${x}px,${y}vh)` 
     camel.style.transform =`translate(${x}px)`
 }
 
-let distance = "1100px";
+let distance = 110;
 // let distance = 5000
-
+let gameOver = false
 let  cars=[".red",".green",".blue"]
 let carindex=0
 
-function moveCar(){
+function moveCar(distanceChange){
      const t1 = gsap.timeline({defaults: {duration: .5}})
     //  t1.to('.cars', {y: '+-1000px'})
     let carclass= cars[carindex]
-    carindex++
-    if(carindex>2){
-        carindex=0
+    if(!gameOver){
+        carindex++
+        if(carindex>2){
+            carindex=0
     }
-     t1.fromTo(carclass, {opacity: 1, y: '-200'}, {opacity: 1, y:distance})
+    
+    }
+     t1.fromTo(carclass, {opacity: 1, y: '-200'}, {opacity: 1, y:(distance-distanceChange)+"vh"})
      if(carindex==0){
-         x=250
+         x=2
      } 
      else if(carindex==1){
-         x=380
+         x=9
      }
      else{
-         x=120
+         x=16
      }
             // camel.style.transform =`translate(${x}px,${y}vh)`
-            camel.style.transform =`translate(${x}px)`
+            camel.style.transform =`translate(${x}vw)`
 }
 
 setInterval(() => {
-    moveCar()
+    if(!gameOver){
+        moveCar(0)
+    }
+    
 },500)
 
     
@@ -170,7 +176,8 @@ function displayQuestion(q){
             else if(input.checked && input.value != correctAnswer.value){
                 animeDown();
                 qSel.innerHTML ="";
-                wrongCount ++;
+                wrongCount ++; 
+                getRandomId()
                 endGame();
               
 
@@ -186,7 +193,13 @@ function displayQuestion(q){
 }
 function endGame() {
     if(wrongCount == 3) {
-      document.querySelector(".camel").style.display = "none";
+        gameOver=true
+        carindex=1
+    //   document.querySelector(".camel").style.display = "YOU LOSE!";
+      setTimeout(function(){
+          moveCar(40)
+          
+      },1000)
   }  else if(qCount == 12) {
   document.querySelector(".endGame").innerHTML = "YOU WIN! Congrats on the Safe Camel!";
   document.querySelector(".endGame").style.display = "flex";
