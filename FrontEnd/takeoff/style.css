@@ -1,3 +1,7 @@
+.fix{
+    z-index: 1000;
+    position: absolute;
+}
 .playGame {
     background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png);
     background-color: black;
@@ -9,20 +13,19 @@
 }
 .playGameButton{
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
     top: 50%;
     bottom: 50%;
-    z-index: 10000;
-    margin-top: 20px;
-    padding-top: 15px;
     text-transform: uppercase;
     font-family: verdana;
     font-size: 6em;
-    color:rgb(0, 255, 30);
-    background-color: #0080FF;
-    margin-top: 0px;
-    z-index: 10000;
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    color: rgb(0, 255, 30);
+    font: 3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #00ff1a;   
 }
 .reset{
     display: flex;
@@ -88,7 +91,6 @@
     width: 300px;
 }
 
-
 @keyframes hideAnimation {
     to {
       visibility: hidden;
@@ -105,7 +107,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .questionBox button {
@@ -150,7 +151,6 @@
 }
 
 .score {
-    
     position: relative;
     margin-left: auto;
     margin-right: auto;

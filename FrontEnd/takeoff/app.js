@@ -81,35 +81,66 @@ function createQuestion(randomId){
 }
 
 function displayQuestion(q){
-    
     container.innerHTML += question(q);
-    // testEl.innerHTML += scoreview();
-    // console.log(q)
+    console.log(q)
     const submitBtn = document.querySelector(".submit");
-    const answers = document.querySelector("#correctAnswer");
+    const correctAnswer = document.querySelector(".rightAnswer");
+    const answerInput = document.querySelectorAll(".answerInput");
     submitBtn.addEventListener('click', ()=>{
-        // console.log(background.getBoundingClientRect());
-        if(answers.checked=true){
-            player.addScore();
-            console.log("hiddenScore " + hS);
-            getRandomId();
-            animeUp();
-            down();
-            winGame();
-            container.innerHTML = ""
-            console.log(player._score);
-            // scoreEl.innerHTML = "__::Score::__ " + player._score;
-        }
-        else if (answers.checked=false) {
-            player.subScore();
-            hS--;
-            console.log("hiddenScore " + hS);
-            console.log(player._score);
-            container.innerHTML = ""
-            getRandomId();
-        }
+        answerInput.forEach(input =>{
+            if(input.checked && input.value == correctAnswer.value){
+                player.addScore();
+                console.log("hiddenScore " + hS);
+                getRandomId();
+                animeUp();
+                down();
+                winGame();
+                container.innerHTML = ""
+                console.log(player._score);
+                // scoreEl.innerHTML = "__::Score::__ " + player._score;
+            }
+            else {
+                player.subScore();
+                hS--;
+                console.log("hiddenScore " + hS);
+                console.log(player._score);
+                container.innerHTML = ""
+                getRandomId();
+            }
+        })
     })
-}
+}        
+                    
+// function displayQuestion(q){
+    
+//     container.innerHTML += question(q);
+//     // testEl.innerHTML += scoreview();
+//     // console.log(q)
+//     const submitBtn = document.querySelector(".submit");
+//     const answers = document.querySelector("#correctAnswer");
+//     submitBtn.addEventListener('click', ()=>{
+//         // console.log(background.getBoundingClientRect());
+//         if(answers.checked=true){
+//             player.addScore();
+//             console.log("hiddenScore " + hS);
+//             getRandomId();
+//             animeUp();
+//             down();
+//             winGame();
+//             container.innerHTML = ""
+//             console.log(player._score);
+//             // scoreEl.innerHTML = "__::Score::__ " + player._score;
+//         }
+//         else {
+//             player.subScore();
+//             hS--;
+//             console.log("hiddenScore " + hS);
+//             console.log(player._score);
+//             container.innerHTML = ""
+//             getRandomId();
+//         }
+//     })
+// }
 
 function winGame() {
     const topReached = document.querySelector(".youWin");
@@ -121,8 +152,7 @@ function winGame() {
         }, 5000); 
     }
 }
-winGame();
-
+// winGame();
 
 function animeUp(){
     
@@ -133,10 +163,11 @@ function animeUp(){
     t2.to('#flames', {opacity: 0})
 }
 
-function animeDown(){
-    const tl = gsap.timeline({defaults: {duration: 5}})
-    tl.to('.bg', {y: '0'})
-}
+// function animeDown(){
+//     const tl = gsap.timeline({defaults: {duration: 5}})
+//     tl.to('.bg', {y: '0'})
+// }
+
 function down(){
     const t3 = gsap.timeline({defaults: {duration: 5}})
     // setTimeout( ()=>{
