@@ -1,3 +1,8 @@
+import question from "./questions"
+
+
+
+
 const computerChoiceDisplay = document.getElementById("computer-choice")
 const userChoiceDisplay = document.getElementById("user-choice")
 const resultDisplay = document.getElementById("result")
@@ -8,14 +13,16 @@ let computerChoice
 let result
 let score
 
-score == 0
+score = 0 ;
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click',(e)=>{
     userChoice= e.target.id 
     userChoiceDisplay.innerHTML = userChoice
     generateComputerChoice()
     getResult()
+    adjustScore()
     resultDisplay.innerHTML = result
+    Winning()
 }))
 
 function generateComputerChoice(){
@@ -64,15 +71,43 @@ function getResult() {
         result = "Draw!"
     }
     console.log(result)
-    resultDisplay.innerHTML = result
-    adjustScore();
+    resultDisplay.innerText = result
 }
 
+
 function adjustScore(){
-    if(result = "Win!"){
-        score = ++
-    } 
-    else if( result = "Lose!"){
-        score = --
+    getResult()
+    if(result == "Win!"){
+        score ++ ;
+        userScoreDisplay.innerText = score;
+    }
+    else if(result == "Draw!"){
+        userScoreDisplay.innerText = score;
+    }
+    else if(result == "Lose!"){
+        function displayQuestion(q){
+            container.innerHTML += question(q);
+            console.log(q)
+            const submitBtn = document.querySelector(".submit");
+            const correctAnswer = document.querySelector(".rightAnswer");
+            const answerInput = document.querySelectorAll(".answerInput");
+            submitBtn.addEventListener('click', ()=>{
+                answerInput.forEach(input =>{
+                    if(input.checked && input.value == !correctAnswer.value){
+                        score -- ;
+                        userScoreDisplay.innerText = score;}
+        }
+    }
+    resultDisplay.innerText = result
+    console.log(result)
+    console.log(score)
+}
+
+function Winning(){
+    if(score < 0){
+        alert("Sorry, You Lose!")
+    }
+    if(score == 10){
+        alert("You Win! Yay!")
     }
 }
