@@ -1,11 +1,11 @@
-import question from "./questions.js"
+import question from "./question.js"
 const container = document.querySelector(".container") 
 const questioncontainer = document.querySelector(".questioncontainer")
 const camel = document.querySelector(".camel")
 const qSel=document.querySelector(".questionsspace");
 let keys = {ArrowsUp: false, ArrowDown: false, Arrowleft: false, ArrowRight: false};
 let x = 50;
-let y = 75;
+// let y = 75;
 const redcar = document.querySelector(".red")
 const greencar = document.querySelector(".green")
 const bluecar = document.querySelector(".blue")
@@ -28,13 +28,15 @@ document.addEventListener('keyup', (e) => {
         case 'ArrowLeft' :
         console.log("arrow key pressed") 
         x-=20  
-        camel.style.transform =`translate(${x}px,${y}vh)`
+        // camel.style.transform =`translate(${x}px,${y}vh)`
+        camel.style.transform =`translate(${x}px)`
     break
   
             case 'ArrowRight' :
             console.log("arrow key pressed") 
             x+=20  
-            camel.style.transform =`translate(${x}px,${y}vh)`
+            // camel.style.transform =`translate(${x}px,${y}vh)`
+            camel.style.transform =`translate(${x}px)`
      break       
 
     }
@@ -45,14 +47,18 @@ document.addEventListener('keyup', (e) => {
 
 function animeUp(){
     y-=15
-    camel.style.transform =`translate(${x}px,${y}vh)` 
+    // camel.style.transform =`translate(${x}px,${y}vh)` 
+    camel.style.transform =`translate(${x}px)`
 }
 function animeDown(){
     y+=15
-    camel.style.transform =`translate(${x}px,${y}vh)` 
+    // camel.style.transform =`translate(${x}px,${y}vh)` 
+    camel.style.transform =`translate(${x}px)`
 }
 
-let distance = 1100
+let distance = "1100px";
+// let distance = 5000
+
 let  cars=[".red",".green",".blue"]
 let carindex=0
 
@@ -64,7 +70,7 @@ function moveCar(){
     if(carindex>2){
         carindex=0
     }
-     t1.fromTo(carclass, {opacity: 1, y: '-200'}, {opacity: 1,y:distance})
+     t1.fromTo(carclass, {opacity: 1, y: '-200'}, {opacity: 1, y:distance})
      if(carindex==0){
          x=250
      } 
@@ -74,7 +80,8 @@ function moveCar(){
      else{
          x=120
      }
-            camel.style.transform =`translate(${x}px,${y}vh)`
+            // camel.style.transform =`translate(${x}px,${y}vh)`
+            camel.style.transform =`translate(${x}px)`
 }
 
 setInterval(() => {
