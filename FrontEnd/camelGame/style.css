@@ -1,17 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     background-color: rgb(184, 129, 11);
+    width: 100%;
+    height: 100%;
     
 }
 .road {
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 20fr 1fr;
     width: 50%;
     margin: 0px auto;
-    height: 100vh;
     background-color: black;
-    background-image: url("/imageCamel/road-line-png-1.png") ;
+    background-image: url("./roadLines.png") ;
     background-size: 100%;
     border-left: 7px dashed;
     border-right: 7px dashed;
@@ -20,14 +26,16 @@
 } 
 .roadpic {
     width:100%;
-    height:100vh;
+    height:100%;
     margin:0px;
 
 
 }
 
 .road{
-    width: 700px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .roadedge {
@@ -36,10 +44,14 @@
     margin:0px;
 }
 .camel {
+    position: relative;
     width: 100px;
     height: 70px;
-    transform: translate(70px,75vh);
     display: block;
+    margin-top: 100%;
+    
+    
+
 
 }
 .endGame {
@@ -55,12 +67,9 @@ display: none;
 
 
 .cars {
-    width: 20%;
-    height: auto;
     padding: 0;
     margin: 0;
     z-index: 1000;
-    
 }
 .carlayout {
      display: flex;
@@ -69,6 +78,7 @@ display: none;
      padding: 0;
      margin: 0;
      justify-content: center;
+
 }
 
 .question{
@@ -82,6 +92,21 @@ display: none;
     
 }
 
+@media only screen and (min-width: 831px){
+
+    .camel {
+        position: relative;
+        width: 100px;
+        height: 70px;
+        display: block;
+        margin-top: 50%;
+        
+        
+    
+    
+    }
+    
+}
 
 
  
