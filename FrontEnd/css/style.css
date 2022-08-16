@@ -409,3 +409,8 @@ footer a {
 .teamList li:hover {
     background-color: orangered;
 }
+/* SINGLE GAME PAGE FOOTER */
+.gameInspiredBy {
+    text-align: center;
+    font-size: smaller;
+}

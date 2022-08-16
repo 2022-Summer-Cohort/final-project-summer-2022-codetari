@@ -55,13 +55,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: left;
+<<<<<<< HEAD
 }
 
 .up {
     position: absolute;
+=======
+  }
+.up{
+    /* position: absolute; */
+>>>>>>> main
     left: 50%;
-    z-index: 1000;
+    /* z-index: 1000; */
 }
+<<<<<<< HEAD
 
 .down {
     position: absolute;
@@ -69,12 +76,19 @@
 }
 
 .spaceship {
+=======
+/* .down{
+    position: absolute;
+    z-index: 1000;
+} */
+.spaceship{
+>>>>>>> main
     position: absolute;
     display: block;
     top: 53%;
     left: 50%;
     transform: translate(-50%);
-    z-index: 100;
+    /* z-index: 100; */
 
 }
 
@@ -149,6 +163,7 @@
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
 }
+<<<<<<< HEAD
 
 .score {
     position: relative;
@@ -156,6 +171,15 @@
     margin-right: auto;
     margin-top: 20px;
     padding-top: 15px;
+=======
+.score{
+    /* z-index: 5000; */
+    width: 500px;
+    position: relative; 
+    top: 505px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+>>>>>>> main
     padding-right: 30px;
     padding-bottom: 30px;
     padding-left: 30px;
@@ -190,9 +214,18 @@
     border-radius: 20px;
     background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
     pointer-events: none;
+<<<<<<< HEAD
 }
 
 .form {
+=======
+  }
+  /* .container {
+    position: absolute;
+    z-index: 15000;
+  } */
+.form{
+>>>>>>> main
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -285,7 +318,7 @@ pre {
     height: 100%;
     width: 50%;
     position: fixed;
-    z-index: 1;
+    /* z-index: 1; */
     top: 0;
     overflow-x: hidden;
     padding-top: 1px;
@@ -298,6 +331,7 @@ pre {
 
 .right {
     right: 0;
+<<<<<<< HEAD
     background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png);
     background-color: black;
     background-repeat: space;
@@ -305,6 +339,208 @@ pre {
     height: 800px;
     margin-top: 0%;
     margin-left: 0%;
+=======
+    /* background-color: rgb(0, 255, 85); */
+}
+.ruleText {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
+.boldType {
+    font-weight: bold;
+}
+.masterLayout {
+    display: flex;
+}
+/* SINGLE GAME HEADER & FOOTER DEFAULTS */
+/* LAYOUT */
+/* UNIFORM SITE STYLES */
+body {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    position: absolute;
+    z-index: 12000;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#center-link {
+    margin-left: -10%;
+}
+
+/* MAIN CONTAINER */
+.mainContainer {
+    box-sizing: border-box;
+    width: 1360px;
+    padding: 2rem;
+}
+
+/* FOOTER */
+.userStats {
+    display: flex;
+    gap: 5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+    z-index: 1100;
+    bottom: 0;
+}
+
+/* STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* UNIFORM SITE STYLES */
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    color: black;
+}
+
+a {
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+#Logo_Original {
+    height: 40px;
+    width: auto;
+}
+
+/* FOOTER */
+.content {
+    color: black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    background-color: orange;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: auto;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16pt;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: bisque;
+}
+
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: white;
+}
+
+.userStats {
+    text-align: center;
+}
+
+.userStats p {
+    font-size: 20pt;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+/* SINGLE GAME PAGE FOOTER */
+.gameInspiredBy {
+    text-align: center;
+    font-size: smaller;
+>>>>>>> main
 }
 
 @keyframes shake {
