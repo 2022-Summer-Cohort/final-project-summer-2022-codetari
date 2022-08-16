@@ -62,7 +62,7 @@ function getRandomId(){
             ids.push(idField);
         })
         let randomId = ids[Math.floor(Math.random()*ids.length)];
-        createQuestion(randomId)
+        createQuestion(randomId);
     })
 }
 
@@ -76,12 +76,11 @@ function createQuestion(randomId){
         .then(res => res.json())
         .then(q =>{
             displayQuestion(q)
-            // console.log(q)
         })
 }
 
 function displayQuestion(q){
-    container.innerHTML += question(q);
+    container.innerHTML = question(q);
     console.log(q)
     const submitBtn = document.querySelector(".submit");
     const correctAnswer = document.querySelector(".rightAnswer");
@@ -99,7 +98,8 @@ function displayQuestion(q){
                 console.log(player._score);
                 // scoreEl.innerHTML = "__::Score::__ " + player._score;
             }
-            else {
+            else if (input.checked && input.value != correctAnswer.value) {
+
                 player.subScore();
                 hS--;
                 console.log("hiddenScore " + hS);
@@ -145,7 +145,7 @@ function displayQuestion(q){
 function winGame() {
     const topReached = document.querySelector(".youWin");
     const newgame = document.querySelector(".newgame");
-    if (player._score >= 4) {
+    if (player._score >= 6) {
         topReached.innerHTML = "victory!!!";
         setTimeout( ()=>{
         location.reload();

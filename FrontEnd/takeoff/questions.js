@@ -20,6 +20,7 @@ export default function question(q){
     }
     const shuffledArray = shuffleArray(answersArr);
     return `
+    <div class="split left">
     <div id="questionPop" class="fix">
     <div>
         <div class="questionContent">
@@ -41,6 +42,7 @@ export default function question(q){
             </div>
         </div>
     </div>
+</div>
 </div>
     `
 }

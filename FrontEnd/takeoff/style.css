@@ -3,13 +3,13 @@
     position: absolute;
 }
 .playGame {
-    background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png);
+    /* background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png);
     background-color: black;
     background-repeat: space;
     background-size: 275px auto;
     height: 800px;
     margin-top: 0%;
-    margin-left: 0%;
+    margin-left: 0%; */
 }
 .playGameButton{
     display: flex;
