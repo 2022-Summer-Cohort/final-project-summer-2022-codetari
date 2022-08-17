@@ -37,7 +37,7 @@ class Player {
 const player = new Player();
 let hS = 1;
 function initiateCollision() { 
-    if (hS <= 0) {
+    if (hS <= -1) {
     document.querySelector(".spaceship").style.display="none";
     document.querySelector(".gameOver").innerHTML = "GAMEOVER";
     document.querySelector("#boom").style.display="flex";  

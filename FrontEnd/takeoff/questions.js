@@ -20,12 +20,13 @@ export default function question(q){
     }
     const shuffledArray = shuffleArray(answersArr);
     return `
+    
     <div class="split left">
     <div id="questionPop" class="fix">
     <div>
         <div class="questionContent">
             <div class="questionBox">
-            <p class="score"></p>
+            
                 <p class="question">${q.question}</p>
                     <div class="form">
                     <input type="hidden" class="rightAnswer" value="${q.answer}">
@@ -41,6 +42,7 @@ export default function question(q){
                     <button type="submit" class="submit">Submit</button>
                     </div>
             </div>
+            <p class="score">]//..Current Score:_ </p>
         </div>
     </div>
 </div>
