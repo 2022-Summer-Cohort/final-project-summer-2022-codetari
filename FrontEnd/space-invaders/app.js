@@ -1,5 +1,8 @@
 import playGame from "./space.js"
 import question from "./questions.js"
+// import newUser from "../js/app.js"
+
+// console.log(newUser);
 
 const tl = gsap.timeline({ defaults: { duration: 2 } })
 const t2 = gsap.timeline({ defaults: { duration: 2 } })
