@@ -338,3 +338,5 @@ const chili = new Recipe('Chili',
 const dinner = [chickenSandwich, caesarSalad, cheeseburger, beefStew, chili];
 
 const allRecipes = [breakfast, lunch, dinner];
+
+console.log(allRecipes[0])
