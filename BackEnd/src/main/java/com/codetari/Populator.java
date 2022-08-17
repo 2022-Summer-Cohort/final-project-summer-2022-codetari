@@ -108,10 +108,10 @@ public class Populator implements CommandLineRunner {
         qARepo.save(qALevel36_1);
         qA qALevel37_1 = new qA("What symbol creates the 'boilerplate'?", "!", game1, "HTML", "1", ">(^_^)> do eiiit", "%(*o*)%",":");
         qARepo.save(qALevel37_1);
-        qA qALevel38_1 = new qA("how are headings defined?", "<h1> through <h6>", game1, "HTML", "1", "String Heading", "<Head> </Head>","'heading'" );
-        qARepo.save(qALevel38_1);
-        qA qALevel39_1 = new qA("how are paragraphs defined?", "<p> </p>", game1, "HTML", "1", "<P>", "<paragraph>","<pp>" );
-        qARepo.save(qALevel39_1);
+        // qA qALevel38_1 = new qA("how are headings defined?", "<h1> through <h6>", game1, "HTML", "1", "String Heading", "<Head> </Head>","'heading'" );
+        // qARepo.save(qALevel38_1);
+        // qA qALevel39_1 = new qA("how are paragraphs defined?", "<p> </p>", game1, "HTML", "1", "<P>", "<paragraph>","<pp>" );
+        // qARepo.save(qALevel39_1);
         qA qALevel40_1 = new qA("how are HTML links defined", "<a> tags", game1, "HTML", "1", "<link>", "<href> </href>","<HTML>" );
         qARepo.save(qALevel40_1);
         qA qALevel41_1 = new qA("What does an href attribute do?", "assign link destination", game1, "HTML", "1", "label an element", "provide ID","None Ya Bizzness if you wanna keep your kneecaps!" );
@@ -142,8 +142,8 @@ public class Populator implements CommandLineRunner {
 
         qA qaLevel52_1 = new qA("To add an element to the end of an array you use?", "push()", game1, "pop()", "add()");
         qARepo.save(qaLevel52_1);
-        qA qaLevel53_1 = new qA("What is the intruder?", "mousein", game1, "mouseover", "mouseout");
-        qARepo.save(qaLevel53_1);
+        // qA qaLevel53_1 = new qA("What is the intruder?", "mousein", game1, "mouseover", "mouseout");
+        // qARepo.save(qaLevel53_1);
         // qA qaLevel54_1 = new qA("Inside which HTML element do we put the JavaScript?", "<script>", game1, " <js>", "<javascript>");
         // qARepo.save(qaLevel54_1);
         qA qaLevel55_1 = new qA("When we don't assign a value to a variable it will be?", "undefined", game1, "null", "NaN");

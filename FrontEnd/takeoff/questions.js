@@ -25,6 +25,7 @@ export default function question(q){
     <div>
         <div class="questionContent">
             <div class="questionBox">
+            <p class="score"></p>
                 <h2 class="question">${q.question}</h2>
                     <div class="form">
                     <input type="hidden" class="rightAnswer" value="${q.answer}">
