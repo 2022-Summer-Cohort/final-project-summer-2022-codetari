@@ -1,21 +1,20 @@
 import question from "./questions.js"
 import scoreview from "./score.js";
 
-const tl = gsap.timeline({ defaults: { duration: 2 } })
-const t2 = gsap.timeline({ defaults: { duration: 2 } })
+// const tl = gsap.timeline({ defaults: { duration: 2 } })
+// const t2 = gsap.timeline({ defaults: { duration: 2 } })
 
-setInterval(() => {
-    tl.fromTo('#left-bracket', { x: '0px', ease: 'bounce' }, { x: '10px', duration: 1 })
-    tl.fromTo('#left-bracket', { x: '10px', ease: 'bounce' }, { x: '0px', duration: 1 })
+// setInterval(() => {
+//     tl.fromTo('#left-bracket', { x: '0px', ease: 'bounce' }, { x: '10px', duration: 1 })
+//     tl.fromTo('#left-bracket', { x: '10px', ease: 'bounce' }, { x: '0px', duration: 1 })
 
-    t2.fromTo('#right-bracket', { x: '0px', ease: 'bounce' }, { x: '-10px', duration: 1 })
-    t2.fromTo('#right-bracket', { x: '-10px', ease: 'bounce' }, { x: '0px', duration: 1 })
+//     t2.fromTo('#right-bracket', { x: '0px', ease: 'bounce' }, { x: '-10px', duration: 1 })
+//     t2.fromTo('#right-bracket', { x: '-10px', ease: 'bounce' }, { x: '0px', duration: 1 })
 
-}, 1000);
+// }, 1000);
 
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
-const scoreEl = document.querySelector(".score");
 const testEl = document.querySelector(".split left");
 const rightEl = document.querySelector(".split right");
 const hiddenScoreEl = document.querySelector(".hiddenScore");
@@ -55,14 +54,14 @@ playBtn.addEventListener("click", ()=> {
 })
 
 // function scoreMaker() {
-//     let
+//     let questionContainer = document.querySelectorAll(".score")
 //     questionContainer.forEach(test => {
 //     const scoreEl = test.querySelector(".score");
 //     console.log(scoreEl);
-//     // scoreEl.innerHTML = "__::Score::__ " + player._score;
 //     scoreEl.innerHTML = "__::Score::__ " + player._score;
 // })          
 // }
+// scoreMaker();
 
 function getRandomId(){
     fetch ("http://localhost:8080/api/qA")
@@ -92,6 +91,7 @@ function createQuestion(randomId){
 }
 
 function displayQuestion(q){
+    const scoreEl = document.querySelector(".score");
     container.innerHTML = question(q);
     console.log(q)
     const submitBtn = document.querySelector(".submit");
@@ -108,7 +108,7 @@ function displayQuestion(q){
                 winGame();
                 container.innerHTML = ""
                 console.log(player._score);
-                // scoreEl.innerHTML = "__::Score::__ " + player._score;
+                scoreEl.innerHTML = player._score;
             }
             else if (input.checked && input.value != correctAnswer.value) {
 
@@ -157,7 +157,7 @@ function displayQuestion(q){
 function winGame() {
     const topReached = document.querySelector(".youWin");
     const newgame = document.querySelector(".newgame");
-    if (player._score >= 6) {
+    if (player._score >= 5) {
         topReached.innerHTML = "victory!!!";
         setTimeout( ()=>{
         location.reload();
@@ -170,7 +170,7 @@ function animeUp(){
     
     const tl = gsap.timeline({defaults: {duration: 5}})
     const t2 = gsap.timeline({defaults: {duration: .5}})
-    tl.to('.bg', {y: '+=500px', ease: "power4.out"})
+    tl.to('.bg', {y: '+=800px', ease: "power4.out"})
     t2.to('#flames', {opacity: 1})
     t2.to('#flames', {opacity: 0})
 }
