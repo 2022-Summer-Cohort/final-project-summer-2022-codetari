@@ -5,6 +5,7 @@ const userChoiceDisplay = document.getElementById("user-choice");
 const resultDisplay = document.getElementById("result");
 const possibleChoices = document.querySelectorAll("button");
 const userScoreDisplay = document.getElementById("score");
+const container = document.querySelector(".container")
 let userChoice;
 let computerChoice;
 let result;
@@ -71,7 +72,7 @@ function adjustScore() {
   } else if (result == "Draw!") {
     userScoreDisplay.innerText = score;
   } else if (result == "Lose!") {
-    displayQuestion()
+    getRandomId()
     alert("You just got a question");
     // score --;
     userScoreDisplay.innerText = score;
@@ -81,7 +82,28 @@ function adjustScore() {
 // resultDisplay.innerText = result
 // console.log(result)
 // console.log(score)
+function getRandomId(){
+  fetch ("http://localhost:8080/api/qA")
+  .then(res => res.json())
+  .then(qas => {
+      let ids = [];
+      qas.forEach(qa =>{
+          const idField = qa.id;
+          ids.push(idField);
+      })
+      let randomId = ids[Math.floor(Math.random()*ids.length)];
+      createQuestion(randomId)
+  })
 
+}
+function createQuestion(randomId){
+  fetch(`http://localhost:8080/api/qA/${randomId}`)
+      .then(res => res.json())
+      .then(q =>{
+          displayQuestion(q)
+      })
+
+}
 
 function displayQuestion(q) {
     container.innerHTML += question(q);
@@ -94,6 +116,12 @@ function displayQuestion(q) {
         if (input.checked && input.value == !correctAnswer.value) {
           score--;
           userScoreDisplay.innerText = score;
+          container.innerHTML = ""
+        }
+        else{
+          score++;
+          userScoreDisplay.innerText = score;
+          container.innerHTML = ""
         }
       });
     });

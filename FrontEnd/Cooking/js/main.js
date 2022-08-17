@@ -40,6 +40,7 @@ function displayQuestion(q){
     submitBtn.addEventListener('click', ()=>{
         answerInput.forEach(input =>{
             if(input.checked && input.value == correctAnswer.value){
+                // select the correct ingredients
             container.innerHTML = ""
             getRandomId();
             console.log("correct");
