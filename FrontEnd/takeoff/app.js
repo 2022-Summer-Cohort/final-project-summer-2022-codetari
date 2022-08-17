@@ -51,6 +51,7 @@ hiddenScoreEl.addEventListener("onChange", ()=> {
 const background = document.querySelector('.bg');
 playBtn.addEventListener("click", ()=> {
     getRandomId(); 
+    document.querySelector(".playGame").style.visibility="hidden";
 })
 
 // function scoreMaker() {
