@@ -12,12 +12,14 @@
     margin-left: 0%;
 }
 .playGameButton{
+    
     display: flex;
     position: absolute;
     justify-content: center;
     align-items: center;
-    top: 50%;
-    bottom: 50%;
+    top: 40%;
+    left: 17%;
+    border-radius: 10px;
     text-transform: uppercase;
     font-family: verdana;
     font-size: 6em;
@@ -110,6 +112,7 @@
 }
 
 .questionBox button {
+    margin-top: 10px;
     background-color: rgb(9, 255, 0);
     color: green;
     border-radius: 3px;
