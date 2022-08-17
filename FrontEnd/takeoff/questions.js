@@ -28,6 +28,7 @@ export default function question(q){
             <div class="questionBox">
             
                 <p class="question">${q.question}</p>
+                    <br>
                     <div class="form">
                     <input type="hidden" class="rightAnswer" value="${q.answer}">
                     ${shuffledArray.map(ans => {

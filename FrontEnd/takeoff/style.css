@@ -121,9 +121,16 @@
     padding: .25rem;
     text-shadow: 0 0 5px #00ff1a;
 }
-
+.radio{
+    display: flex;
+    flex-direction: row;
+    right: 0%;
+    background-color: #286d00;
+}
 .questionBox {
     position: static;
+    /* display: flex;
+    flex-direction: column; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
