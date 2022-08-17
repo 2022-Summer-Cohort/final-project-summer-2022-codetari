@@ -6,10 +6,11 @@ export default function allGames(games){
         <section class="allGamesBoxes">
 
             ${games.map(game =>{
+                let gameCat = game.category
                 return `
                 <article class="gameBox">
                 <div class="gameBox1">
-                <h2 class="boxOpen">${game.category}</h2>
+                <h2 class="boxOpen">${gameCat}</h2>
             </div>
             <div class="gameBox2">
                 <ul>
