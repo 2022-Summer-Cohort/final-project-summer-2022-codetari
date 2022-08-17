@@ -10,6 +10,7 @@
     height: 800px;
     margin-top: 0%;
     margin-left: 0%;
+    
 }
 .playGameButton{
     
@@ -62,7 +63,6 @@
 .up {
     position: absolute;
     left: 50%;
-    /* z-index: 1000; */
 }
 
 .down {
@@ -76,8 +76,6 @@
     top: 53%;
     left: 50%;
     transform: translate(-50%);
-    /* z-index: 100; */
-
 }
 
 #boom {
@@ -121,19 +119,22 @@
     padding: .25rem;
     text-shadow: 0 0 5px #00ff1a;
 }
-.radio{
+.answerInput{
     display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
     flex-direction: row;
     right: 0%;
     background-color: #286d00;
+    color: #000;
 }
 .questionBox {
     position: static;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 50px;
     padding-top: 15px;
     padding-right: 30px;
     padding-bottom: 30px;
@@ -223,8 +224,8 @@ pre {
     bottom: 50%;
     z-index: 10000;
     position: absolute;
-    top: 10%; 
-    right: 50%;
+    top: 20%; 
+    right: 00%;
     transform: translate(50%,-50%);
     text-transform: uppercase;
     font-family: verdana;
@@ -251,8 +252,8 @@ pre {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 25%;
-    bottom: 50%;
+    top: 30%; 
+    left: 100%;
     z-index: 10000;
     position: absolute;
     right: 50%;
@@ -284,24 +285,21 @@ pre {
 }
 
 .split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
     width: 50%;
     position: fixed;
-    /* z-index: 1; */
     top: 0;
-    /* overflow-x: hidden; */
     padding-top: 1px;
 }
 
 .left {
     left: 0;
     top: 50px;
-    /* background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png); */
     background-repeat: space;
     background-size: 275px auto;
-    /* height: 800px;
-    margin-top: 0%;
-    margin-left: 0%; */
 }
 
 .right {
@@ -310,9 +308,7 @@ pre {
     background-color: black;
     background-repeat: space;
     background-size: 275px auto;
-    /* height: 800px;
-    margin-top: 0%;
-    margin-left: 0%; */
+    z-index: 500;
 }
 .form{
     display: flex;
@@ -332,24 +328,6 @@ pre {
     position: absolute;
     z-index: 1000;
 }
- 
-/* .split {
-    height: 100%;
-    width: 50%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    overflow-x: hidden;
-    padding-top: 1px;
-}
-  .left {
-    left: 0;
-    background-color: #111;
-}
-  .right {
-    right: 0;
-    background-color: rgb(0, 255, 85);
-} */
 .ruleText {
     display: flex;
     flex-direction: column;
