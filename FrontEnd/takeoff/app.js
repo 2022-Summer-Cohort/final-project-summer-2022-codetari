@@ -55,11 +55,11 @@ playBtn.addEventListener("click", ()=> {
 })
 
 function scoreMaker() {
-    var questionContainer = document.querySelectorAll(".score")
+    const questionContainer = document.querySelectorAll(".score")
     questionContainer.forEach(test => {
-    const scoreEl = test.querySelector(".score");
+    let scoreEl = test.querySelector(".score");
     console.log(scoreEl);
-    scoreEl.innerHTML = "__::Score::__ " + player._score;
+    scoreEl.innerHTML = ".:://Score//::. _" + player._score;
 })          
 }
 
@@ -80,7 +80,6 @@ function getRandomId(){
 
 function makeQuestionView(q){
     body.innerHtml = question(q);
-    
 }
 
 function createQuestion(randomId){
@@ -120,6 +119,7 @@ function displayQuestion(q){
                 console.log(player._score);
                 container.innerHTML = ""
                 getRandomId();
+                scoreMaker();
             }
         })
     })
