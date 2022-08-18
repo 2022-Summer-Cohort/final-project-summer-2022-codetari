@@ -54,15 +54,15 @@ playBtn.addEventListener("click", ()=> {
     document.querySelector(".playGame").style.visibility="hidden";
 })
 
-// function scoreMaker() {
-//     let questionContainer = document.querySelectorAll(".score")
-//     questionContainer.forEach(test => {
-//     const scoreEl = test.querySelector(".score");
-//     console.log(scoreEl);
-//     scoreEl.innerHTML = "__::Score::__ " + player._score;
-// })          
-// }
-// scoreMaker();
+function scoreMaker() {
+    var questionContainer = document.querySelectorAll(".score")
+    questionContainer.forEach(test => {
+    const scoreEl = test.querySelector(".score");
+    console.log(scoreEl);
+    scoreEl.innerHTML = "__::Score::__ " + player._score;
+})          
+}
+
 
 function getRandomId(){
     fetch ("http://localhost:8080/api/qA")
@@ -92,7 +92,7 @@ function createQuestion(randomId){
 }
 
 function displayQuestion(q){
-    const scoreEl = document.querySelector(".score");
+    // const scoreEl = document.querySelector(".score");
     container.innerHTML = question(q);
     console.log(q)
     const submitBtn = document.querySelector(".submit");
@@ -109,7 +109,8 @@ function displayQuestion(q){
                 winGame();
                 container.innerHTML = ""
                 console.log(player._score);
-                scoreEl.innerHTML = player._score;
+                // scoreEl.innerHTML = player._score;
+                scoreMaker();
             }
             else if (input.checked && input.value != correctAnswer.value) {
 
@@ -123,37 +124,6 @@ function displayQuestion(q){
         })
     })
 }        
-                    
-// function displayQuestion(q){
-    
-//     container.innerHTML += question(q);
-//     // testEl.innerHTML += scoreview();
-//     // console.log(q)
-//     const submitBtn = document.querySelector(".submit");
-//     const answers = document.querySelector("#correctAnswer");
-//     submitBtn.addEventListener('click', ()=>{
-//         // console.log(background.getBoundingClientRect());
-//         if(answers.checked=true){
-//             player.addScore();
-//             console.log("hiddenScore " + hS);
-//             getRandomId();
-//             animeUp();
-//             down();
-//             winGame();
-//             container.innerHTML = ""
-//             console.log(player._score);
-//             // scoreEl.innerHTML = "__::Score::__ " + player._score;
-//         }
-//         else {
-//             player.subScore();
-//             hS--;
-//             console.log("hiddenScore " + hS);
-//             console.log(player._score);
-//             container.innerHTML = ""
-//             getRandomId();
-//         }
-//     })
-// }
 
 function winGame() {
     const topReached = document.querySelector(".youWin");
@@ -183,9 +153,8 @@ function animeUp(){
 
 function down(){
     const t3 = gsap.timeline({defaults: {duration: 5}})
-    // setTimeout( ()=>{
+    
         t3.to('.bg', {y: '0', delay: 5, ease: "power4.in", onComplete: initiateCollision})
-    // }, 10000); 
 }
 
 
