@@ -32,7 +32,7 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="/images/liban.behi.jpg" class="devPics" alt="">
+                                <img src="/images/Image from iOS (1).jpg" class="devPics" alt="">
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
