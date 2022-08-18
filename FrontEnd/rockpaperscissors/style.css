@@ -267,3 +267,27 @@ footer a {
     text-align: center;
     font-size: smaller;
 }
+
+.correctAnswer {
+    position: absolute;
+    z-index: 2000;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    color: white;
+    font-size: 100px;
+
+}
+
+.wrongAnswer {
+    position: absolute;
+    z-index: 1000;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    color: white;
+    font-size: 100px;
+
+}
