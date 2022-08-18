@@ -146,26 +146,40 @@ function createQuestion(randomId) {
 
 }
 
-function displayQuestion(q) {
+function displayQuestion(q){
   container.innerHTML += question(q);
-  console.log(q);
+  console.log(q)
   const submitBtn = document.querySelector(".submit");
   const correctAnswer = document.querySelector(".rightAnswer");
   const answerInput = document.querySelectorAll(".answerInput");
-  submitBtn.addEventListener("click", () => {
-    answerInput.forEach((input) => {
-      if (input.checked && input.value == !correctAnswer.value) {
-        score--;
-        userScoreDisplay.innerText = score;
-        container.innerHTML = ""
+  submitBtn.addEventListener('click', ()=>{
+      let t = 0;
+      answerInput.forEach(input =>{
+          if(input.checked && input.value == correctAnswer.value){
+              t++;
+          const tl = gsap.timeline({defaults: {duration: 1}})
+          const t2 = gsap.timeline({defaults: {duration: 1}})
+
+          tl.to('.correctAnswer', {opacity: 1})
+          t2.to('.correctAnswer', {opacity: 0, delay: 1})
+          container.innerHTML = ""
+          }
+      })
+      if(t==0){
+
+          score--;
+          userScoreDisplay.innerText = score;
+          
+          const tl = gsap.timeline({defaults: {duration: 1}})
+          const t2 = gsap.timeline({defaults: {duration: 1}})
+
+          container.innerHTML = ""
+          tl.to('.wrongAnswer', {opacity: 1})
+          t2.to('.wrongAnswer', {opacity: 0, delay: 1})
       }
-      else {
-        score++;
-        userScoreDisplay.innerText = score;
-        container.innerHTML = ""
-      }
-    });
-  });
+
+  })
+
 }
 
 
