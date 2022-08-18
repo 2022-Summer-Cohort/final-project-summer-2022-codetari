@@ -172,22 +172,22 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="" class="devPics" alt="">
+                                <img src="/images/patrickHastings.jpg" class="devPics" alt="">
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Patrick Hastings</h4>
-                                        <p class="jobTitle">Back End Developer</p>
+                                        <p class="jobTitle">Full Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://github.com/PatCHastings" class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/patchastings" class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
