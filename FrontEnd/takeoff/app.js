@@ -54,14 +54,16 @@ playBtn.addEventListener("click", ()=> {
     document.querySelector(".playGame").style.visibility="hidden";
 })
 
-function scoreMaker() {
-    const questionContainer = document.querySelectorAll(".score")
-    questionContainer.forEach(test => {
-    let scoreEl = test.querySelector(".score");
-    console.log(scoreEl);
-    scoreEl.innerHTML = ".:://Score//::. _" + player._score;
-})          
-}
+// function scoreMaker() {
+//     const questionContainer = document.querySelectorAll(".score")
+//     questionContainer.forEach(test => {
+//     let scoreEl = test.querySelector(".score");
+//     console.log(scoreEl);
+//     scoreEl.innerHTML = ".:://Score//::. _" + player._score;
+// })          
+// }
+const scoreEl = document.querySelector(".score");
+scoreEl.innerText = player._score;
 
 
 function getRandomId(){
@@ -80,6 +82,7 @@ function getRandomId(){
 
 function makeQuestionView(q){
     body.innerHtml = question(q);
+    
 }
 
 function createQuestion(randomId){
@@ -108,7 +111,7 @@ function displayQuestion(q){
                 winGame();
                 container.innerHTML = ""
                 console.log(player._score);
-                // scoreEl.innerHTML = player._score;
+        
                 scoreMaker();
             }
             else if (input.checked && input.value != correctAnswer.value) {
