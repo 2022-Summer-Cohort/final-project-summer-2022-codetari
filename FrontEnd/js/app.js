@@ -30,23 +30,23 @@ function makeHomeView(){
             }
         })
         const newUser = new user(userLevel, userLang)
-        console.log(newUser)
-        makeGamesView();
+        makeGamesView(newUser);
     })
 
 }
-function makeGamesViewFromJson(games){
-    anchor.innerHTML = header();
+function makeGamesViewFromJson(newUser, games){
+    console.log(newUser.language)
+    anchor.innerHTML = header(newUser.language, newUser.level);
     anchor.innerHTML += allGames(games);
     anchor.innerHTML += footer();
     boxes();
 }
-function makeGamesView(){
+function makeGamesView(newUser){
     fetch ('http://localhost:8080/api/games')
     .then(res => res.json())
     .then(games =>{
 
-        makeGamesViewFromJson(games)
+        makeGamesViewFromJson(newUser, games)
     })
 }
 makeHomeView();
