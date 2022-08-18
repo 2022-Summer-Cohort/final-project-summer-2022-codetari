@@ -1,9 +1,9 @@
-export default function header(){
+export default function header(language, level){
     return`
     <header>
         <nav>
             <div>
-                <a href="./gameSettings.html">
+                <a href="./index.html">
                     <?xml version="1.0" encoding="UTF-8"?><svg id="Logo_Original" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 424 77">
                         <rect width="424" height="77" rx="12" ry="12" />
@@ -42,9 +42,24 @@ export default function header(){
                     </svg>
                 </a>
             </div>
-            <a id="center-link" href="./allGames.html">Games</a>
-            <a href="./userProfile.html">Profile</a>
+            <a id="center-link" href="./index.html">Games</a>
+            <a href="#userProfile">Profile</a>
         </nav>
     </header>
+    <div id="userProfile" class="overlay">
+    <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <div class="gameRulesBox">
+                <h2 class="rules">User Profile</h2>
+                <div class="ruleText">
+                    <p>Language: ${language}</p>
+                    <p>Level: ${level}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
     `
 }

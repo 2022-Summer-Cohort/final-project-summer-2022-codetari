@@ -3,4 +3,7 @@ export default class user{
         this.level = level
         this.language = language
     }
+    getLevel(){
+        return this.level;
+    }
 }

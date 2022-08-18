@@ -1,5 +1,20 @@
 import playGame from "./space.js"
 import question from "./questions.js"
+// import newUser from "../js/app.js"
+
+// console.log(newUser);
+
+const tl = gsap.timeline({ defaults: { duration: 2 } })
+const t2 = gsap.timeline({ defaults: { duration: 2 } })
+
+setInterval(() => {
+    tl.fromTo('#left-bracket', { x: '0px', ease: 'bounce' }, { x: '10px', duration: 1 })
+    tl.fromTo('#left-bracket', { x: '10px', ease: 'bounce' }, { x: '0px', duration: 1 })
+
+    t2.fromTo('#right-bracket', { x: '0px', ease: 'bounce' }, { x: '-10px', duration: 1 })
+    t2.fromTo('#right-bracket', { x: '-10px', ease: 'bounce' }, { x: '0px', duration: 1 })
+
+}, 1000);
 
 const container = document.querySelector(".container")
 const playBtn = document.querySelector(".playGame")
