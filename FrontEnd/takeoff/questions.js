@@ -28,6 +28,7 @@ export default function question(q){
             <div class="questionBox">
             
                 <p class="question">${q.question}</p>
+                    <br>
                     <div class="form">
                     <input type="hidden" class="rightAnswer" value="${q.answer}">
                     ${shuffledArray.map(ans => {
@@ -42,7 +43,7 @@ export default function question(q){
                     <button type="submit" class="submit">Submit</button>
                     </div>
             </div>
-            <p class="score">]//..Current Score:_ </p>
+            <p class="score">//..Current Score..// _ </p>
         </div>
     </div>
 </div>
