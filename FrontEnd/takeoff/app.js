@@ -19,6 +19,7 @@ const testEl = document.querySelector(".split left");
 const rightEl = document.querySelector(".split right");
 const hiddenScoreEl = document.querySelector(".hiddenScore");
 
+
 class Player {
     constructor() {
         this._score = 0;
@@ -36,7 +37,7 @@ class Player {
 
 const player = new Player();
 let hS = 1;
-function initiateCollision() { 
+function initiateCollision() {
     if (hS <= -1) {
     document.querySelector(".spaceship").style.display="none";
     document.querySelector(".gameOver").innerHTML = "GAMEOVER";
@@ -53,17 +54,6 @@ playBtn.addEventListener("click", ()=> {
     getRandomId(); 
     document.querySelector(".playGame").style.visibility="hidden";
 })
-
-// function scoreMaker() {
-//     const questionContainer = document.querySelectorAll(".score")
-//     questionContainer.forEach(test => {
-//     let scoreEl = test.querySelector(".score");
-//     console.log(scoreEl);
-//     scoreEl.innerHTML = ".:://Score//::. _" + player._score;
-// })          
-// }
-const scoreEl = document.querySelector(".score");
-scoreEl.innerText = player._score;
 
 
 function getRandomId(){
@@ -94,8 +84,9 @@ function createQuestion(randomId){
 }
 
 function displayQuestion(q){
-    // const scoreEl = document.querySelector(".score");
     container.innerHTML = question(q);
+    const scoreEl = document.querySelector(".score");
+    scoreEl.innerText = "<//Current Score//> _ " + player._score;
     console.log(q)
     const submitBtn = document.querySelector(".submit");
     const correctAnswer = document.querySelector(".rightAnswer");
@@ -111,8 +102,6 @@ function displayQuestion(q){
                 winGame();
                 container.innerHTML = ""
                 console.log(player._score);
-        
-                scoreMaker();
             }
             else if (input.checked && input.value != correctAnswer.value) {
 
@@ -122,7 +111,7 @@ function displayQuestion(q){
                 console.log(player._score);
                 container.innerHTML = ""
                 getRandomId();
-                scoreMaker();
+                
             }
         })
     })
@@ -138,7 +127,6 @@ function winGame() {
         }, 5000); 
     }
 }
-// winGame();
 
 function animeUp(){
     
