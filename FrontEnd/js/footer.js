@@ -32,13 +32,15 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="/images/liban.behi.jpg" class="devPics" alt="">
+
+                                <img src="/images/Image from iOS (1).jpg" class="devPics" alt="">
+
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Liban Behi</h4>
-                                        <p class="jobTitle">Back End Developer</p>
+                                        <p class="jobTitle">Full-Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
@@ -60,22 +62,22 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="" class="devPics" alt="">
+                                <img src="/images/tyler.jpg" class="devPics" alt="">
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Tyler Brunetti</h4>
-                                        <p class="jobTitle">Back End Developer</p>
+                                        <p class="jobTitle">Full-Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://tmbrunetti.github.io/" class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/tyler-brunetti/" class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
@@ -94,7 +96,7 @@ export default function footer(){
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Ferie Dagnew</h4>
-                                        <p class="jobTitle">Back End Developer</p>
+                                        <p class="jobTitle">Full-Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
@@ -116,22 +118,24 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="" class="devPics" alt="">
+                                <img src="/images/KayKay.png" class="devPics" alt="">
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Kayleen Ellis</h4>
-                                        <p class="jobTitle">Front End Developer</p>
+                                        <p class="jobTitle">Full-Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
-                                            <a href="github.com" class="devGithubs">
+                                            <a href="https://github.com/KayKay-9175/kayleenellis.github.io
+                                            " class="devGithubs">
                                                 <img src="/images/githublogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="linkedin.com" class="linkedIn">
+                                            <a href="https://www.linkedin.com/in/kayleen-ellis-855a4ab7/
+                                            " class="linkedIn">
                                                 <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
@@ -150,7 +154,7 @@ export default function footer(){
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Taylour Harris</h4>
-                                        <p class="jobTitle">Front End Developer</p>
+                                        <p class="jobTitle">Full-Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
@@ -178,7 +182,7 @@ export default function footer(){
                                 <div class="devProfiles">
                                     <div class="devNameTitle">
                                         <h4 class="devNames">Patrick Hastings</h4>
-                                        <p class="jobTitle">Full Stack Developer</p>
+                                        <p class="jobTitle">Full-Stack Developer</p>
                                     </div>
                                     <div class="devLinks">
                                         <div>
