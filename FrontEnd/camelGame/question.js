@@ -20,9 +20,9 @@ export default function question(q){
     }
     const shuffledArray = shuffleArray(answersArr);
     return `
-    <div id="questionPop" class="overlay">
-    <div class="popup">
-        <div class="content">
+    <div id="questionPop">
+    <div>
+        <div>
             <div class="questionBox">
                 <h2 class="question">${q.question}</h2>
                     <div class="form">
