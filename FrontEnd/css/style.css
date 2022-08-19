@@ -101,6 +101,12 @@ svg {
     border-radius: 5px;
 }
 
+.gameSettingsBox button:hover {
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+}
+
 /* ALL GAMES PAGE */
 .favsIcon img {
     height: 15px;
@@ -202,9 +208,10 @@ svg {
     height: 3%;
     width: 3%;
 }
+
 .inGameProfileView img:hover {
-   background-color: palevioletred;
-   cursor: pointer;
+    background-color: palevioletred;
+    cursor: pointer;
 }
 
 /* USER PROFILE PAGE */
@@ -300,6 +307,19 @@ svg {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    overflow: scroll;
+}
+
+#aboutUsPop .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#aboutUsPop .content p {
+    text-align: left;
+    font-weight: normal;
+    font-size: 12pt;
 }
 
 .overlay {
@@ -409,6 +429,7 @@ footer a {
 .teamList li:hover {
     background-color: orangered;
 }
+
 /* SINGLE GAME PAGE FOOTER */
 .gameInspiredBy {
     text-align: center;

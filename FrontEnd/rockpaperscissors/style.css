@@ -185,7 +185,15 @@ header img {
     height: 40px;
     width: auto;
 }
-
+.boldType {
+    font-weight: bold;
+}
+.ruleText {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
 /* FOOTER */
 .content {
     color: black;
