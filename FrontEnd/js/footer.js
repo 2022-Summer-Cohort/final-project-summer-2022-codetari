@@ -12,11 +12,11 @@ export default function footer(){
             </div>
             <a class="close" href="#">&times;</a>
             <div class="content">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi impedit voluptatibus tempora
-                    qui soluta eius doloremque maxime earum! Voluptatem deleniti voluptates inventore earum eos
-                    beatae, autem, soluta explicabo consectetur, corporis iste sed minus odio dolor vel. At
-                    exercitationem totam neque sed delectus in, cum esse ex, veritatis perferendis molestias
-                    tenetur!</p>
+                <p>There are many sites dedicated to practicing coding problems. But not a lot dedicated to the drilling of terminology and basic foundational and fundamental concepts in an easy-to-understand format. A base understanding of which is needed for all things coding related; be it interviews, searching for a solution to a problem, or just conversing with another developer.</p>
+                <p>We wanted to give back. As those new to coding, we thought what would have been useful for us when we were first starting out?</p>
+                <p>What type of environment helps us to learn the best?</p>
+                <p>Our Answer: CODETARI</p>
+                <p>A safe welcoming environment for both people new to coding (bootcamp or self-taught) or someone that simply wants to brush up on the basics, that allows users to play games while studying terms and concepts. Unconsciously learning through repetition.</p>
             </div>
         </div>
     </div>
