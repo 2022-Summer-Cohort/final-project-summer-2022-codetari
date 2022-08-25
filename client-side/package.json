@@ -1,0 +1,30 @@
+{
+  "name": "final-project-summer-2022-codetari",
+  "version": "1.0.0",
+  "description": "final-project-summer-2022-codetari created by GitHub Classroom",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest --watchAll"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2022-Summer-Cohort/final-project-summer-2022-codetari.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2022-Summer-Cohort/final-project-summer-2022-codetari/issues"
+  },
+  "homepage": "https://github.com/2022-Summer-Cohort/final-project-summer-2022-codetari#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "babel-jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "parcel": "^2.7.0"
+  }
+}
