@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95cc0c24-704a-4bcd-a682-386195e2a4da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/com/codetari/Populator.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/com/codetari/Populator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/static/camelGame/camelCasedodge.html" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/static/camelGame/camelCasedodge.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codetari/Populator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codetari/Populator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/camelGame/camelCasedodge.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/camelGame/camelCasedodge.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

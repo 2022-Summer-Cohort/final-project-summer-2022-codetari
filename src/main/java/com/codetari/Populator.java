@@ -26,7 +26,7 @@ public class Populator implements CommandLineRunner {
         gameRepo.save(game1);
         Game game2 = new Game("Space Invaders",3, "what is a rest based web service","C#", 4, "Arcade", "./space-invaders/index.html");
         gameRepo.save(game2);
-        Game game3 = new Game("Camel Case",5, "why do we use MVC","Java", 7, "Animals", "./camelGame/camelCaseDodge.html");
+        Game game3 = new Game("Camel Case",5, "why do we use MVC","Java", 7, "Animals", "./camelGame/camelcasedodge.html");
         gameRepo.save(game3);
         Game game4 = new Game("Cooking",5, "why do we use MVC","Java", 7, "Cooking", "./Cooking/index.html");
         gameRepo.save(game4);
