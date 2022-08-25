@@ -1,0 +1,301 @@
+body {
+    background-image: url(/rockpaperscissors/images/rpsBKG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: darkcyan;
+}
+
+.vs h1 {
+    font-size: 50pt;
+}
+
+.computerImage {
+    height: 200px;
+    width: 200px;
+}
+
+.playerImage {
+    height: 200px;
+    width: 200px;
+}
+
+.computerChoiceImage img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+    background-color: black;
+    padding: 1rem;
+}
+
+.playerChoiceImage img {
+    height: 300px;
+    width: 300px;
+    border-radius: 50px;
+    background-color: black;
+    padding: 1rem;
+}
+
+.computerInput h2 {
+    background-color: black;
+    color: red;
+    text-align: center;
+}
+
+.playerInput h2 {
+    background-color: black;
+    color: green;
+    text-align: center;
+}
+
+.choiceButtons button {
+    border-radius: 25px;
+    border: .75rem ridge;
+    border-color: yellow;
+    height: 100px;
+    width: auto;
+}
+
+#rock {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+#rock:hover {
+    background-color: rgb(3, 39, 105);
+    border-color: gold;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+#paper {
+    background-color: green;
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+#paper:hover {
+    background-color: rgb(9, 75, 9);
+    border-color: gold;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+#scissors {
+    background-color: plum;
+    color: white;
+    font-size: 20pt;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+#scissors:hover {
+    background-color: rgb(184, 15, 184);
+    border-color: gold;
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.result {
+    border-radius: 5px;
+    height: 100px;
+    width: 200px;
+    background-color: cyan;
+    font-size: 15pt;
+}
+
+/* .result h1 {
+    border-radius: 5px;
+    background-color: purple;
+    color: white;
+    font-size: 100pt;
+    text-shadow: 2px 2px black;
+    padding: .5rem;
+} */
+
+.score {
+    border-radius: 5px;
+    height: 100px;
+    width: 200px;
+    background-color: gold;
+    font-size: 15pt;
+}
+
+/* SINGLE GAME HEADER & FOOTER DEFAULTS */
+/* STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* UNIFORM SITE STYLES */
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
+
+/* h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+} */
+
+input {
+    color: black;
+}
+
+a {
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+#Logo_Original {
+    height: 40px;
+    width: auto;
+}
+.boldType {
+    font-weight: bold;
+}
+.ruleText {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
+/* FOOTER */
+.content {
+    color: black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    background-color: orange;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: auto;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16pt;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: bisque;
+}
+
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: white;
+}
+
+.userStats {
+    text-align: center;
+}
+
+.userStats p {
+    font-size: 20pt;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+/* SINGLE GAME PAGE FOOTER */
+.gameInspiredBy {
+    text-align: center;
+    font-size: smaller;
+}
+
+.correctAnswer {
+    position: absolute;
+    z-index: 2000;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    color: white;
+    font-size: 100px;
+
+}
+
+.wrongAnswer {
+    position: absolute;
+    z-index: 1000;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    opacity: 0;
+    color: white;
+    font-size: 100px;
+
+}

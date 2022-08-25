@@ -1,0 +1,530 @@
+.fix{
+    z-index: 1000;
+    position: absolute;
+}
+.playGame {
+    background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png);
+    background-color: black;
+    background-repeat: space;
+    background-size: 275px auto;
+    height: 800px;
+    margin-top: 0%;
+    margin-left: 0%;
+    
+}
+.playGameButton{
+    
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 40%;
+    left: 36%;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 6em;
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    color: rgb(0, 255, 30);
+    font: 3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #00ff1a;   
+}
+.reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    bottom: 50%;
+    z-index: 10000;
+    margin-top: 20px;
+    padding-top: 15px;
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 6em;
+    color:rgb(0, 255, 30);
+    background-color: #0080FF;
+    margin-top: 0px;
+    z-index: 10000;
+}
+.bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+.up {
+    position: absolute;
+    left: 50%;
+}
+
+.down {
+    position: absolute;
+    z-index: 1000;
+}
+
+.spaceship {
+    position: absolute;
+    display: block;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+#boom {
+    animation: hideAnimation 0s ease-in 1.6s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    display: none;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10000;
+    height: 300px;
+    width: 300px;
+}
+
+@keyframes hideAnimation {
+    to {
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
+  }
+
+#flames {
+    opacity: 0;
+}
+
+.question {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionBox button {
+    margin-top: 10px;
+    background-color: rgb(9, 255, 0);
+    color: green;
+    border-radius: 3px;
+    border: none;
+    width: fit-content;
+    padding: .25rem;
+    text-shadow: 0 0 5px #00ff1a;
+}
+.answerInput{
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    right: 0%;
+    background-color: #286d00;
+    color: #000;
+}
+.questionBox {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-top: 15px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    height: 100vh;
+    color: rgb(0, 255, 30);
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #00ff1a;
+    border-radius: 25px;
+    width: 80%;
+    height: 80%;
+}
+
+.questionBox::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+}
+
+.score {
+    display: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    top: 50%;
+    bottom: 50%;
+    top: 505px;
+    width: 80%;
+    background-color: black;
+    background-image: radial-gradient(rgba(0, 150, 0, 0.75), black 120%);
+    height: 10vh;
+    color: rgb(0, 255, 30);
+    font: 1.3rem Inconsolata, monospace;
+    text-shadow: 0 0 5px #00ff1a;
+    border-radius: 25px;
+    z-index: 12000;    
+}
+
+.score::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) 1px, transparent 1px, transparent 2px);
+    pointer-events: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+
+::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+pre {
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1000;
+}
+
+.gameOver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    bottom: 50%;
+    z-index: 10000;
+    position: absolute;
+    top: 20%; 
+    right: 00%;
+    transform: translate(50%,-50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 12em;
+    font-weight: 700;
+    color: #ff0000;
+    text-shadow: 1px 1px 1px #871212,
+        1px 2px 1px #871212,
+        1px 3px 1px #871212,
+        1px 4px 1px #871212,
+        1px 5px 1px #871212,
+        1px 6px 1px #871212,
+        1px 7px 1px #871212,
+        1px 8px 1px #871212,
+        1px 9px 1px #871212,
+        1px 10px 1px #871212,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+
+}
+.youWin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 30%; 
+    left: 100%;
+    z-index: 10000;
+    position: absolute;
+    right: 50%;
+    transform: translate(50%,-50%);
+    text-transform: uppercase;
+    font-family: verdana;
+    font-size: 12em;
+    font-weight: 700;
+    color: #15ff00;
+    text-shadow: 1px 1px 1px #286d00,
+        1px 2px 1px #286d00,
+        1px 3px 1px #286d00,
+        1px 4px 1px #286d00,
+        1px 5px 1px #286d00,
+        1px 6px 1px #286d00,
+        1px 7px 1px #286d00,
+        1px 8px 1px #286d00,
+        1px 9px 1px #286d00,
+        1px 10px 1px #286d00,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+
+}
+.newgame{
+
+    
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    padding-top: 1px;
+}
+
+.left {
+    left: 0;
+    top: 50px;
+    background-repeat: space;
+    background-size: 275px auto;
+}
+
+.right {
+    right: 0;
+    background-image: url(/frontEnd/images/codetariLogoBKGPatternAllWhite.png);
+    background-color: black;
+    background-repeat: space;
+    background-size: 275px auto;
+    z-index: 500;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+}
+ 
+::selection {
+    background: #0080FF;
+  text-shadow: none;
+}
+pre {
+    margin: 0;
+}
+.overlay{
+    position: absolute;
+    z-index: 1000;
+}
+.ruleText {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-bottom: 1rem;
+}
+.boldType {
+    font-weight: bold;
+}
+.masterLayout {
+    display: flex;
+}
+/* SINGLE GAME HEADER & FOOTER DEFAULTS */
+/* LAYOUT */
+/* UNIFORM SITE STYLES */
+body {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* HEADER */
+header {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: 100%;
+    position: absolute;
+    z-index: 12000;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+#center-link {
+    margin-left: -10%;
+}
+
+/* MAIN CONTAINER */
+.mainContainer {
+    box-sizing: border-box;
+    width: 1360px;
+    padding: 2rem;
+}
+
+/* FOOTER */
+.userStats {
+    display: flex;
+    gap: 5rem;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    position: relative;
+    z-index: 1100;
+    bottom: 0;
+}
+
+/* STYLE */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* UNIFORM SITE STYLES */
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+input {
+    color: black;
+}
+
+a {
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+#Logo_Original {
+    height: 40px;
+    width: auto;
+}
+
+/* FOOTER */
+.content {
+    color: black;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    background-color: orange;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: auto;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16pt;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: bisque;
+}
+
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: white;
+}
+
+.userStats {
+    text-align: center;
+}
+
+.userStats p {
+    font-size: 20pt;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+/* SINGLE GAME PAGE FOOTER */
+.gameInspiredBy {
+    text-align: center;
+    font-size: smaller;
+}
+

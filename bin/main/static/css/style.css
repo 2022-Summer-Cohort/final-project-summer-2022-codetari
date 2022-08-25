@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* UNIFORM SITE STYLES */
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Source Code Pro', monospace, sans-serif;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+input {
+    color: black;
+}
+
+a {
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    background-color: black;
+}
+
+nav a {
+    color: white;
+}
+
+a:hover {
+    color: yellow;
+}
+
+header img {
+    height: 40px;
+    width: auto;
+}
+
+svg {
+    height: 40px;
+    width: auto;
+}
+
+/* MAIN CONTAINER */
+/* SIGN IN PAGES */
+.signInPage {
+    background-image: url(/images/codetariLogoBKGPatternAllWhite.png);
+    background-color: black;
+    background-repeat: space;
+    background-size: 275px auto;
+    height: 500px;
+}
+
+.signInBox {
+    background-color: darkgray;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.signInBox button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+#adminSignUpPop {
+    color: black;
+}
+
+#userSignUpPop {
+    color: black;
+}
+
+/* GAME SETTINGS PAGE */
+.gameSettingsPage {
+    background-image: url(/images/codetariLogoBKGPatternAllBlack.png);
+    background-color: white;
+    background-repeat: space;
+    background-size: 275px auto;
+    height: 500px;
+}
+
+.gameSettingsBox {
+    background-color: darkgray;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.gameSettingsBox button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+.gameSettingsBox button:hover {
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+}
+
+/* ALL GAMES PAGE */
+.favsIcon img {
+    height: 15px;
+    width: 15px;
+}
+
+.favsBtn:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+.favsBox {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.favsBox p {
+    color: black;
+    font-size: small;
+    font-style: italic;
+}
+
+.favsBoxClose:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.gameBox1 {
+    background-color: aquamarine;
+    border-radius: 10px;
+    height: 55px;
+    width: 275px;
+    text-align: center;
+}
+
+.gameBox2 {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.gameBox1:hover {
+    background-color: green;
+    cursor: pointer;
+    color: goldenrod;
+}
+
+.gameBox2 p {
+    color: black;
+    font-size: small;
+    font-style: italic;
+}
+
+.boxClose:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.ask {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+/* FAQ PAGE */
+.faqBox h3 {
+    color: darkcyan;
+}
+
+.faqBox p {
+    color: gold;
+}
+
+/* SINGLE GAME PAGE*/
+.questionBox button {
+    background-color: purple;
+    color: white;
+    border-radius: 3px;
+    border: none;
+}
+
+.startGame {
+    background-color: greenyellow;
+    padding: 2rem;
+    border-radius: 50%;
+    border: .75rem ridge;
+    border-color: green;
+    color: darkgreen;
+    font-weight: bold;
+    font-size: 25pt;
+}
+
+.startGame:hover {
+    background-color: olivedrab;
+    color: gold;
+    cursor: pointer;
+}
+
+.inGameProfileView img {
+    background-color: white;
+    height: 3%;
+    width: 3%;
+}
+
+.inGameProfileView img:hover {
+    background-color: palevioletred;
+    cursor: pointer;
+}
+
+/* USER PROFILE PAGE */
+.userProfilePic1 {
+    height: 200px;
+    width: 200px;
+}
+
+.openAccountSettings img {
+    height: 10px;
+    width: 10px;
+}
+
+.userStats {
+    text-align: center;
+}
+
+.userStats h3 {
+    font-size: 25pt;
+}
+
+.userStats p {
+    font-size: 25pt;
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+.userSocial h2 {
+    background-color: purple;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.userSocial img {
+    height: 25px;
+    width: 25px;
+}
+
+/* USER ACCOUNT SETTINGS */
+.accountSettingsSubmitBtn {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.userProfilePic {
+    height: 100px;
+    width: 100px;
+}
+
+.deleteAccountBtn {
+    background-color: inherit;
+    color: white;
+    text-align: center;
+}
+
+.deleteAccountBtn img {
+    height: 25px;
+    width: 25px;
+}
+
+.deleteAccountBtn img:hover {
+    background-color: red;
+}
+
+/* ADMIN MAIN PAGE */
+.adminMainPage h1 {
+    font-size: 35pt;
+}
+
+.questionOptions a {
+    background-color: aqua;
+    border-radius: 5px;
+}
+
+.adminBox {
+    background-color: darkorchid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* FOOTER */
+.companyInfoLogo {
+    height: 35%;
+    width: 35%;
+}
+
+.content {
+    color: black;
+}
+
+#aboutUsPop {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    overflow: scroll;
+}
+
+#aboutUsPop .content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#aboutUsPop .content p {
+    text-align: left;
+    font-weight: normal;
+    font-size: 12pt;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 0.5s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    background-color: orange;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    overflow: auto;
+}
+
+.popup h2 {
+    margin: 10px;
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16pt;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: bisque;
+}
+
+#aboutUsPop h2 {
+    color: black;
+}
+
+#aboutUsPop .content {
+    color: black;
+}
+
+.super {
+    overflow: auto;
+}
+
+footer {
+    background-color: black;
+}
+
+footer a {
+    color: white;
+}
+
+#devTeamPop {
+    overflow: auto;
+}
+
+#devTeamPop h2 {
+    color: black;
+}
+
+.linkLogo {
+    height: 20px;
+    width: 20px;
+}
+
+.devPics {
+    height: 125px;
+    width: 125px;
+}
+
+.teamList {
+    text-align: center;
+    background-color: orange;
+    /* background-color:rgb(247, 174, 40); */
+}
+
+.teamList li {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.teamList li:hover {
+    background-color: orangered;
+}
+
+/* SINGLE GAME PAGE FOOTER */
+.gameInspiredBy {
+    text-align: center;
+    font-size: smaller;
+}
