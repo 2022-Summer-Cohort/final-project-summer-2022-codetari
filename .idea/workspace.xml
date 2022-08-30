@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95cc0c24-704a-4bcd-a682-386195e2a4da" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Attachment-1 (1).png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/ferie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Image from iOS (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/libanmain.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/githubLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/githublogo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/linkedInLogo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/linkedinlogo1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/footer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

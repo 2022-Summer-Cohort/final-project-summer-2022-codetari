@@ -33,7 +33,7 @@ export default function footer(){
                         <div class="devs">
                             <div class="devs1">
 
-                                <img src="/images/Image from iOS (1).jpg" class="devPics" alt="">
+                                <img src="/images/libanmain.jpg" class="devPics" alt="">
 
                             </div>
                             <div class="devs2">
@@ -45,12 +45,12 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/LibanBehi" class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/libanbehi/" class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -73,12 +73,12 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://tmbrunetti.github.io/" class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/tyler-brunetti/" class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -90,7 +90,7 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="./images/attachment-1 (1).png" class="devPics" alt="">
+                                <img src="./images/ferie.png" class="devPics" alt="">
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
@@ -101,12 +101,12 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/FerieDagnew" class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/feriedagnew/" class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -130,13 +130,13 @@ export default function footer(){
                                         <div>
                                             <a href="https://github.com/KayKay-9175/kayleenellis.github.io
                                             " class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/kayleen-ellis-855a4ab7/
                                             " class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -159,12 +159,12 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/TaylourH" class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/taylourharris/" class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -187,12 +187,12 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/PatCHastings" class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/patchastings" class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -215,12 +215,12 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/chandanbihagpatel" class="devGithubs">
-                                                <img src="/images/githublogo.png" class="linkLogo" alt="">
+                                                <img src="githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
                                             <a href="https://www.linkedin.com/in/chandanbihagpatel/" class="linkedIn">
-                                                <img src="/images/linkedInlogo.png" class="linkLogo" alt="">
+                                                <img src="/images/linkedinlogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                     </div>
