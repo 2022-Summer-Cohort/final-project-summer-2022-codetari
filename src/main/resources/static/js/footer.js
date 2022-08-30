@@ -73,7 +73,7 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://tmbrunetti.github.io/" class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
