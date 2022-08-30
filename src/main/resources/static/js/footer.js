@@ -45,7 +45,7 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/LibanBehi" class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
@@ -90,7 +90,7 @@ export default function footer(){
                     <li>
                         <div class="devs">
                             <div class="devs1">
-                                <img src="./images/ferie.png" class="devPics" alt="">
+                                <img src="/images/ferie.png" class="devPics" alt="">
                             </div>
                             <div class="devs2">
                                 <div class="devProfiles">
@@ -101,7 +101,7 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/FerieDagnew" class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
@@ -130,7 +130,7 @@ export default function footer(){
                                         <div>
                                             <a href="https://github.com/KayKay-9175/kayleenellis.github.io
                                             " class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
@@ -159,7 +159,7 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/TaylourH" class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
@@ -187,7 +187,7 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/PatCHastings" class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
@@ -215,7 +215,7 @@ export default function footer(){
                                     <div class="devLinks">
                                         <div>
                                             <a href="https://github.com/chandanbihagpatel" class="devGithubs">
-                                                <img src="githublogo1.png" class="linkLogo" alt="">
+                                                <img src="/images/githublogo1.png" class="linkLogo" alt="">
                                             </a>
                                         </div>
                                         <div>
